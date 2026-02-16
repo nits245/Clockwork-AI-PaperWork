@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@aws-amplify/auth": "^6.12.4",
+    "@aws-amplify/cli": "^12.12.6",
+    "aws-amplify": "^6.14.4",
+    "aws-sdk": "^2.1677.0",
+    "dotenv": "^16.4.5",
+    "psql": "^0.0.1",
+    "react-router-dom": "^6.15.0"
+  },
+  "devDependencies": {
+    "prettier": "3.2.5"
+  },
+  "scripts": {
+    "init": "./scripts/init.sh",
+    "start-base-backend": "cd ./backend && npm start",
+    "start-client-backend": "cd ./external/paperwork_client_only/backend && npm start",
+    "start-parties-backend": "cd ./external/paperwork_parties_only/backend && npm start",
+    "start-base-frontend": "cd ./frontend && npm start",
+    "start-client-frontend": "cd ./external/paperwork_client_only/frontend && npm start",
+    "start-parties-frontend": "cd ./external/paperwork_parties_only/frontend && npm start"
+  }
+}
