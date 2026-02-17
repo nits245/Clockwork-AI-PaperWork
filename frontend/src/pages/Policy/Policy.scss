@@ -1,0 +1,133 @@
+.policy-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+}
+
+.policy-layout {
+  display: flex;
+  gap: 3rem;
+}
+
+/* Table of Contents */
+.policy-toc {
+  flex: 1;
+  max-width: 250px;
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
+  padding-right: 1.5rem;
+  border-right: 1px solid #e0e0e0;
+
+  h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 0.4rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      line-height: 1.4;
+
+      a {
+        text-decoration: none;
+        color: #444;
+        font-size: 0.9rem;
+        transition: color 0.2s ease;
+      }
+
+      &:hover a {
+        color: #0052cc;
+      }
+
+      &.active {
+        font-weight: 700; /* bold text */
+
+        &::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #0052cc;
+          font-size: 1.1rem;
+        }
+
+        a {
+          color: #0052cc;
+        }
+      }
+    }
+  }
+}
+
+/* Content */
+.policy-content {
+  flex: 3;
+  padding-left: 1rem;
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #172b4d;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: #172b4d;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #444;
+  }
+
+  a {
+    color: #0052cc;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .policy-layout {
+    flex-direction: column;
+  }
+
+  .policy-toc {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+    top: auto;
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .policy-content {
+    padding-left: 0;
+  }
+}

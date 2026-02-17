@@ -1,0 +1,72 @@
+[
+  {
+    "id": "clause.header.swinburne",
+    "title": "Acknowledgement and Consent",
+    "body": "<div class='swinburne-header-section'><div class='swinburne-header-content'><h1 class='swinburne-header-title'>ACKNOWLEDGEMENT AND CONSENT</h1><div class='swinburne-parties-info'>To: {{parties.name}}<br>{{parties.address}}<br>{{parties.city_state_postcode}}</div></div><img src='/Logo2.png' alt='Logo' class='swinburne-logo'></div>",
+    "jurisdiction": "AU",
+    "tags": ["header", "swinburne", "acknowledgement", "with-logo"]
+  },
+  {
+    "id": "clause.acknowledgement.intro",
+    "title": "Acknowledgement Introduction",
+    "body": "I, {{participant.name}}, acknowledge that Swinburne University of Technology (\"Swinburne\") wishes to use the materials listed below, developed by a team of Swinburne students in the context of their final year project titled:",
+    "jurisdiction": "AU",
+    "tags": ["acknowledgement", "intro"]
+  },
+  {
+    "id": "clause.project.title",
+    "title": "",
+    "body": "{{project.title}}",
+    "jurisdiction": "AU",
+    "tags": ["project", "title"]
+  },
+  {
+    "id": "clause.consent.statement",
+    "title": "",
+    "body": "I acknowledge that the team of Swinburne students has discussed the contents of these materials with me, and I give consent that the materials developed can be:\n\n(Please tick where appropriate)",
+    "jurisdiction": "AU",
+    "tags": ["consent", "statement"]
+  },
+  {
+    "id": "clause.usage.capex",
+    "title": "CAPEX Usage",
+    "body": "[CHECKBOX] Shown at the 2025 Capstone Project Exposition (CAPEX25) to be held on campus on {{event.date}} by the School of Science, Computing and Engineering Technologies",
+    "jurisdiction": "AU",
+    "tags": ["usage", "capex", "exposition", "checkbox"]
+  },
+  {
+    "id": "clause.usage.promotion",
+    "title": "Promotional Usage",
+    "body": "[CHECKBOX] Used to assist the promotion of Swinburne University of Technology, the School of Science, Computing and Engineering Technologies at Swinburne, and relevant programs.",
+    "jurisdiction": "AU",
+    "tags": ["usage", "promotion", "checkbox"]
+  },
+  {
+    "id": "clause.materials.list",
+    "title": "Materials List",
+    "body": "Materials:\nExpo Poster\nProject description (\"elevator pitch\")",
+    "jurisdiction": "AU",
+    "tags": ["materials", "checklist"]
+  },
+  {
+    "id": "clause.signature.block",
+    "title": "Signature Block",
+    "body": "<div class='signature-field'><label>SIGNED:</label><input type='text' class='signature-input' /></div><div class='signature-field'><label>Print Name:</label><input type='text' class='signature-input' /></div><div class='signature-field'><label>Organization:</label><input type='text' class='signature-input' /></div><div class='signature-field'><label>Date:</label><input type='date' class='signature-input' /></div>",
+    "jurisdiction": "AU",
+    "tags": ["signature", "signing"]
+  },
+  {
+    "id": "clause.return.instructions",
+    "title": "Return Instructions",
+    "body": "Note: After signing, this document should be returned to {{coordinator.name}} (The Capstone Project Coordinator) at Swinburne University of Technology via email: {{coordinator.email}}",
+    "jurisdiction": "AU",
+    "tags": ["instructions", "return"]
+  },
+  {
+    "id": "clause.footer.swinburne",
+    "title": "Footer",
+    "body": "Swinburne University of Technology | CRICOS Provider 00111D | swinburne.edu.au",
+    "jurisdiction": "AU",
+    "tags": ["footer", "swinburne"]
+  }
+]

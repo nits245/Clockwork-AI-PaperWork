@@ -1,0 +1,86 @@
+[
+  {
+    "id": "trial.intro.clinical",
+    "title": "CLINICAL TRIAL PARTICIPANT AGREEMENT",
+    "body": "CLINICAL TRIAL PARTICIPATION CONSENT AND AGREEMENT\n\nTrial Title: {{trial.title}}\nPrincipal Investigator: {{investigator.name}}\nInstitution: {{institution.name}}\nTrial Reference Number: {{trial.reference_number}}\n\nThis document provides information about the clinical trial and outlines the terms of your participation. Please read this document carefully and ask questions about anything you do not understand.",
+    "jurisdiction": "AU",
+    "tags": ["trial", "clinical", "participant"]
+  },
+  {
+    "id": "trial.intro.research",
+    "title": "RESEARCH TRIAL PARTICIPATION AGREEMENT",
+    "body": "RESEARCH STUDY PARTICIPANT INFORMATION AND CONSENT\n\nStudy Title: {{trial.title}}\nResearch Team: {{research_team}}\nInstitution: {{institution.name}}\nEthics Approval Number: {{ethics_approval_number}}\n\nYou are being invited to participate in a research study. This document explains the purpose, procedures, benefits, and risks of the research study.",
+    "jurisdiction": "AU",
+    "tags": ["trial", "research", "participant"]
+  },
+  {
+    "id": "trial.intro.product",
+    "title": "PRODUCT TRIAL PARTICIPATION AGREEMENT",
+    "body": "PRODUCT TESTING AND EVALUATION AGREEMENT\n\nProduct Name: {{product.name}}\nManufacturer: {{manufacturer.name}}\nTrial Period: {{trial.duration}}\nTrial Coordinator: {{trial_coordinator}}\n\nThis agreement outlines the terms and conditions for your participation in product testing and evaluation activities.",
+    "jurisdiction": "AU",
+    "tags": ["trial", "product", "testing"]
+  },
+  {
+    "id": "trial.purpose_objectives",
+    "title": "TRIAL PURPOSE AND OBJECTIVES",
+    "body": "PURPOSE OF THE TRIAL:\n\n{{trial.purpose}}\n\nPRIMARY OBJECTIVES:\n{{primary_objectives}}\n\nSECONDARY OBJECTIVES:\n{{secondary_objectives}}\n\nRESEARCH QUESTIONS:\nThis trial aims to answer the following research questions:\n{{research_questions}}\n\nEXPECTED OUTCOMES:\n{{expected_outcomes}}\n\nSCIENTIFIC RATIONALE:\n{{scientific_rationale}}",
+    "jurisdiction": "AU",
+    "tags": ["trial", "purpose", "objectives"]
+  },
+  {
+    "id": "trial.eligibility_criteria",
+    "title": "ELIGIBILITY CRITERIA",
+    "body": "INCLUSION CRITERIA:\n\nTo participate in this trial, you must meet ALL of the following criteria:\n\na) Age: {{age_requirement}}\nb) Gender: {{gender_requirement}}\nc) Health status: {{health_requirement}}\nd) Medical history: {{medical_history_requirement}}\ne) Current medications: {{medication_requirement}}\nf) Lifestyle factors: {{lifestyle_requirement}}\ng) Availability: {{availability_requirement}}\nh) Geographic location: {{location_requirement}}\ni) Language proficiency: {{language_requirement}}\nj) Consent capability: {{consent_requirement}}\n\nEXCLUSION CRITERIA:\n\nYou cannot participate if you have ANY of the following:\n\n{{exclusion_criteria}}\n\nSCREENING PROCESS:\n\nEligibility will be confirmed through:\n- Medical examination\n- Laboratory tests (if applicable)\n- Questionnaire completion\n- Interview with research staff\n- Review of medical records (with consent)",
+    "jurisdiction": "AU",
+    "tags": ["trial", "eligibility", "criteria"]
+  },
+  {
+    "id": "trial.procedures_protocol",
+    "title": "TRIAL PROCEDURES AND PROTOCOL",
+    "body": "TRIAL TIMELINE:\n\nTotal Duration: {{trial_duration}}\nNumber of Visits: {{total_visits}}\nScreening Period: {{screening_duration}}\nTreatment Period: {{treatment_duration}}\nFollow-up Period: {{followup_duration}}\n\nVISIT SCHEDULE:\n\nScreening Visit (Day {{screening_day}}):\n{{screening_procedures}}\n\nBaseline Visit (Day {{baseline_day}}):\n{{baseline_procedures}}\n\nTreatment Visits:\n{{treatment_visit_schedule}}\n\nFollow-up Visits:\n{{followup_visit_schedule}}\n\nPROCEDURES AT EACH VISIT:\n\n{{visit_procedures}}\n\nSAMPLE COLLECTION:\n{{sample_collection_details}}\n\nDATA COLLECTION:\n{{data_collection_methods}}\n\nMONITORING REQUIREMENTS:\n{{monitoring_requirements}}",
+    "jurisdiction": "AU",
+    "tags": ["trial", "procedures", "protocol"]
+  },
+  {
+    "id": "trial.risks_benefits",
+    "title": "RISKS AND BENEFITS",
+    "body": "POTENTIAL BENEFITS:\n\nDirect Benefits to You:\n{{direct_benefits}}\n\nPotential Benefits to Society:\n{{societal_benefits}}\n\nIMPORTANT NOTE: There is no guarantee that you will receive any benefit from participating in this trial.\n\nPOTENTIAL RISKS AND SIDE EFFECTS:\n\nCommon Side Effects (occurring in more than 10% of participants):\n{{common_side_effects}}\n\nUncommon Side Effects (occurring in 1-10% of participants):\n{{uncommon_side_effects}}\n\nRare Side Effects (occurring in less than 1% of participants):\n{{rare_side_effects}}\n\nSerious Adverse Events:\n{{serious_adverse_events}}\n\nUnknown Risks:\n{{unknown_risks}}\n\nRISK MANAGEMENT:\n\n{{risk_management_procedures}}\n\nEMERGENCY PROCEDURES:\n\nIn case of emergency:\n1. Contact trial staff immediately: {{emergency_contact}}\n2. Seek immediate medical attention if required\n3. Inform medical staff of trial participation\n4. Report all adverse events to trial team within {{reporting_timeframe}} hours",
+    "jurisdiction": "AU",
+    "tags": ["trial", "risks", "benefits"]
+  },
+  {
+    "id": "trial.compensation_costs",
+    "title": "COMPENSATION AND COSTS",
+    "body": "PARTICIPANT COMPENSATION:\n\nReimbursement for Participation:\n- Payment per visit: {{payment_per_visit}}\n- Total maximum compensation: {{total_compensation}}\n- Payment method: {{payment_method}}\n- Payment schedule: {{payment_schedule}}\n\nTravel and Parking:\n- Travel reimbursement: {{travel_reimbursement}}\n- Parking fees: {{parking_arrangement}}\n- Public transport: {{transport_allowance}}\n\nMeal Allowances:\n- Meal provision: {{meal_provision}}\n- Dietary requirements: {{dietary_accommodation}}\n\nAccommodation (if required):\n- Overnight stays: {{accommodation_provision}}\n- Accommodation standard: {{accommodation_details}}\n\nCOSTS TO PARTICIPANTS:\n\nNo Cost to You:\n- All trial-related procedures\n- Trial medication/intervention\n- Required laboratory tests\n- Trial-related medical consultations\n\nYour Responsibility:\n- Regular medical care (non-trial related)\n- Personal expenses\n- Insurance excess (if applicable)\n\nTAX IMPLICATIONS:\n\nCompensation may be subject to taxation. You are responsible for declaring payments as income if required by tax law.\n\nPAYMENT CONDITIONS:\n\n- Payment made after each completed visit\n- Pro-rata payment if you withdraw from the trial\n- No payment for missed appointments\n- Final payment upon completion of follow-up period",
+    "jurisdiction": "AU",
+    "tags": ["trial", "compensation", "costs"]
+  },
+  {
+    "id": "trial.confidentiality_privacy",
+    "title": "CONFIDENTIALITY AND PRIVACY",
+    "body": "DATA COLLECTION AND USE:\n\nPersonal Information Collected:\n{{personal_info_collected}}\n\nHealth Information Collected:\n{{health_info_collected}}\n\nData Use Purposes:\n- Analysis for this specific trial\n- Regulatory submissions\n- Publication in scientific journals\n- Future related research (with separate consent)\n\nDATA PROTECTION:\n\nConfidentiality Measures:\n- All data de-identified for analysis\n- Unique participant ID assigned\n- Secure data storage systems\n- Limited access to authorized personnel only\n- Regular security audits\n\nData Retention:\n- Raw data retained for {{data_retention_period}} years\n- Published data retained indefinitely\n- Personal identifiers destroyed after {{identifier_destruction_period}}\n\nACCESS TO YOUR INFORMATION:\n\nWho May Access Your Data:\n- Principal investigator and research team\n- Regulatory authorities ({{regulatory_authorities}})\n- Ethics committee members\n- Trial monitors and auditors\n- Sponsor representatives (if applicable)\n\nYOUR RIGHTS:\n\n- Right to access your personal information\n- Right to request correction of errors\n- Right to withdraw consent for data use\n- Right to complain to privacy commissioner\n\nData sharing outside Australia: {{international_data_sharing}}\n\nPublication of results will not include any information that could identify you personally.",
+    "jurisdiction": "AU",
+    "tags": ["trial", "confidentiality", "privacy"]
+  },
+  {
+    "id": "trial.withdrawal_termination",
+    "title": "WITHDRAWAL AND TERMINATION",
+    "body": "YOUR RIGHT TO WITHDRAW:\n\nVoluntary Participation:\n- Your participation is entirely voluntary\n- You may withdraw at any time without giving reasons\n- Withdrawal will not affect your future medical care\n- Withdrawal will not affect your legal rights\n\nWithdrawal Process:\n1. Inform the trial team of your decision\n2. Complete final safety assessment (recommended)\n3. Return trial materials if applicable\n4. Discuss ongoing care needs with your doctor\n\nPartial Withdrawal Options:\n- Stop trial intervention but continue follow-up visits\n- Stop study visits but allow data analysis\n- Complete withdrawal from all aspects\n\nDATA USE AFTER WITHDRAWAL:\n\nData collected before withdrawal:\n{{data_use_post_withdrawal}}\n\nTRIAL TERMINATION BY INVESTIGATORS:\n\nThe trial team may withdraw you from the trial if:\n- You no longer meet eligibility criteria\n- Serious adverse events occur\n- You cannot comply with trial requirements\n- The trial is terminated early\n- Medical reasons require withdrawal\n\nEARLY TRIAL TERMINATION:\n\nThe entire trial may be stopped early if:\n- Safety concerns arise\n- Sufficient data has been collected\n- Sponsor decision\n- Regulatory authority decision\n- Lack of efficacy\n\nYou will be informed immediately if the trial is terminated early.\n\nFOLLOW-UP CARE:\n\nAfter withdrawal or trial completion:\n- Return to regular medical care\n- Continued monitoring if medically necessary: {{post_trial_monitoring}}\n- Access to trial results: {{results_access}}",
+    "jurisdiction": "AU",
+    "tags": ["trial", "withdrawal", "termination"]
+  },
+  {
+    "id": "trial.contact_information",
+    "title": "CONTACT INFORMATION AND COMPLAINTS",
+    "body": "TRIAL TEAM CONTACTS:\n\nPrincipal Investigator:\n{{investigator.name}}\nTitle: {{investigator.title}}\nPhone: {{investigator.phone}}\nEmail: {{investigator.email}}\nAddress: {{investigator.address}}\n\nTrial Coordinator:\n{{coordinator.name}}\nPhone: {{coordinator.phone}}\nEmail: {{coordinator.email}}\nAvailable: {{coordinator.hours}}\n\n24-Hour Emergency Contact:\nPhone: {{emergency_contact}}\nAfter-hours: {{after_hours_contact}}\n\nSponsor Contact (if applicable):\n{{sponsor.name}}\nContact: {{sponsor.contact}}\nPhone: {{sponsor.phone}}\n\nINDEPENDENT CONTACTS:\n\nEthics Committee:\n{{ethics_committee.name}}\nChair: {{ethics_committee.chair}}\nPhone: {{ethics_committee.phone}}\nEmail: {{ethics_committee.email}}\n\nComplaints Process:\n\nFor complaints about the trial:\n1. Discuss with trial team first\n2. Contact ethics committee if unresolved\n3. Contact institutional complaints officer\n4. External complaint options: {{external_complaint_contacts}}\n\nRegulatory Authority:\n{{regulatory_authority.name}}\nPhone: {{regulatory_authority.phone}}\nWebsite: {{regulatory_authority.website}}\n\nConsumer Advocacy:\n{{consumer_advocacy.name}}\nPhone: {{consumer_advocacy.phone}}\nWebsite: {{consumer_advocacy.website}}",
+    "jurisdiction": "AU",
+    "tags": ["trial", "contact", "complaints"]
+  },
+  {
+    "id": "trial.legal_liability",
+    "title": "LEGAL LIABILITY AND INSURANCE",
+    "body": "RESEARCH-RELATED INJURY:\n\nInsurance Coverage:\nThis trial is covered by {{insurance_type}} insurance provided by {{insurance_provider}}.\n\nPolicy Number: {{policy_number}}\nCoverage Amount: {{coverage_amount}}\nContact: {{insurance_contact}}\n\nWhat is Covered:\n- Medical treatment for research-related injury\n- Compensation for research-related harm\n- Legal costs (if applicable)\n- Lost income due to research-related injury: {{income_coverage}}\n\nWhat is NOT Covered:\n- Pre-existing medical conditions\n- Injuries due to non-compliance with protocol\n- Injuries from standard medical care\n- Pain and suffering (unless negligence proven)\n\nClaims Process:\n1. Report injury immediately to trial team\n2. Seek appropriate medical treatment\n3. Complete incident report forms\n4. Insurance company will investigate\n5. Compensation determined based on investigation\n\nLEGAL RIGHTS:\n\nNothing in this agreement removes your legal rights:\n- Right to seek legal advice\n- Right to pursue compensation through courts\n- Right to report professional misconduct\n- Consumer protection rights\n\nLIMITATION OF LIABILITY:\n\n{{liability_limitations}}\n\nINDEMNITY:\n\nYou agree to:\n- Provide accurate health information\n- Follow trial procedures as instructed\n- Report adverse events promptly\n- Not hold individual researchers personally liable (except for negligence)\n\nGOVERNING LAW:\n\nThis agreement is governed by the laws of {{governing_jurisdiction}}.\n\nDisputes will be resolved in the courts of {{court_jurisdiction}}.",
+    "jurisdiction": "AU",
+    "tags": ["trial", "liability", "insurance"]
+  }
+]

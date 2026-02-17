@@ -1,0 +1,153 @@
+@import '../../ThemeVariables';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  // Top section of the sidebar
+  .top {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    margin-bottom: 10px;
+    background-color: $primary-color;
+    flex-shrink: 0;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .avatar {
+      display: flex;
+      width: 100%;
+      margin-left: 65px;
+      gap: 20px;
+      align-items: center;
+
+      .avatar-desc {
+        display: flex;
+        flex-direction: column;
+
+        .name {
+          font-size: 15px;
+          font-weight: 500;
+        }
+
+        .desc {
+          font-size: 13px;
+        }
+
+        .online {
+          display: flex;
+          align-content: center;
+          gap: 3px;
+
+          span {
+            color: $subheading-color;
+          }
+        }
+      }
+    }
+  }
+
+  // Mid section of the sidebar
+  .mid {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 0px 0px 0px 10px;
+    color: $subheading-color;
+    overflow-y: auto;
+
+    font-weight: 600;
+    color: #999999;
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      vertical-align: middle;
+      justify-content: center;
+      gap: 5px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 12px;
+        gap: 18px;
+        text-decoration: none; // remove underline from NavLink
+        color: inherit;
+        transition: background-color 0.2s ease;
+
+        img {
+          height: 20px;
+          width: 20px;
+          filter: invert(63%) sepia(3%) saturate(24%) hue-rotate(3deg)
+            brightness(96%) contrast(93%);
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+        }
+
+        &:hover {
+          background-color: $background-color;
+          cursor: pointer;
+
+          span {
+            font-weight: bold;
+            color: $primary-color;
+          }
+
+          img {
+            filter: invert(83%) sepia(62%) saturate(3292%) hue-rotate(163deg)
+              brightness(91%) contrast(91%);
+          }
+        }
+
+        // ✅ Active state when NavLink matches route
+        &.active {
+          background-color: $background-color;
+          font-weight: bold;
+          color: $primary-color;
+
+          img {
+            filter: invert(83%) sepia(62%) saturate(3292%) hue-rotate(163deg)
+              brightness(91%) contrast(91%);
+          }
+        }
+      }
+    }
+  }
+
+  // Bottom section of the sidebar
+  .bottom {
+    padding: 10px;
+    background-color: $primary-color;
+    padding-left: 30px;
+    cursor: pointer;
+
+    .setting {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        width: 24px;
+        height: 24px;
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(340deg)
+          brightness(106%) contrast(101%);
+      }
+
+      span {
+        color: white;
+      }
+    }
+  }
+}

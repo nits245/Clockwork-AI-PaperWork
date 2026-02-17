@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&display=swap');
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  flex-shrink: 0;
+  // background-color: #A0E1FF;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+// /* Left side of navbar */
+// .left-nav .logo {
+//   display: flex;
+//   align-items: center;
+// }
+
+// /* Logo image styling */
+// .logo img {
+//   height: 40px;  /* Set the height of the image */
+//   width: auto;   /* Auto-adjust the width based on the aspect ratio */
+// }
+
+// /* Logo text styling */
+// .logo span {
+//   margin-top:10px;
+//   margin-left: 4px;  /* Space between the image and the text */
+//   font-size: 24px;    /* Text size */
+//   font-weight: 400;   /* Regular weight, you can use 700 for bold */
+//   color: #000;        /* Text color */
+//   font-family: 'Manjari', sans-serif;  /* Apply Manjari font */
+// }
+
+// .logo span a {
+//   text-decoration: none;  /* Remove underline from the link */
+//   color: inherit;         /* Ensure the link inherits the color from the span */
+// }
+
+.mid-nav .search {
+  position: relative;
+  width: 500px;
+  max-width: 900px;       /* Max width for larger screens */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling the input field */
+.mid-nav .search input {
+  width: 100%;            /* Full width for responsiveness */
+  padding: 12px 40px 12px 15px; /* Padding to allow space for the search icon */
+  border: 0px solid black;
+  background-color: #F6F6FB;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;  /* Include padding and border in width calculations */
+}
+
+/* Styling the search icon inside the input field */
+.mid-nav .search .search-icon {
+  position: absolute;
+  right: 15px;            /* Positioning the icon on the right */
+  width: 20px;            /* Icon size */
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Styling the filtered results dropdown */
+.filtered-results {
+  position: absolute;
+  top: 100%;              /* Positioned below the input */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  max-height: 200px;       /* Max height for scrollable results */
+  overflow-y: auto;
+}
+
+/* Styling individual filtered results */
+.filtered-result {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.filtered-result:hover {
+  background-color: #f8f8f8;
+}
+  .right-nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+
+    .tooltip-container {
+      position: relative;
+      display: inline-block;
+
+      .tooltip {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 14px;
+        z-index: 1000;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        display: none; // Hide by default
+      }
+
+      &:hover .tooltip {
+        //When hovered over, apply the tooltip style
+        display: block; // Show on hover
+      }
+    }
+  }
+
+  .left-nav {
+    //for the icon
+    img {
+      widows: 24px;
+      height: 24px;
+    }
+
+    //for text and icon
+    .title {
+      display: flex;
+      gap: 5px;
+      font-weight: 500;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
+
+.profile-dropdown {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.logout button {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+/* Media queries for responsiveness */
+
+/* For smaller screens like tablets */
+@media (max-width: 768px) {
+  .mid-nav .search {
+    max-width: 100%;       /* Full width on smaller screens */
+  }
+
+  .mid-nav .search input {
+    font-size: 14px;       /* Smaller font size */
+    padding: 10px 35px 10px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .mid-nav .search .search-icon {
+    width: 18px;           /* Adjust icon size */
+    height: 18px;
+  }
+}

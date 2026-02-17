@@ -1,0 +1,42 @@
+[
+  {
+    "id": "CLIENT_CONSENT_FORM",
+    "title": "Client Research Participation Consent Form",
+    "category": "Academic & University",
+    "uses": [
+      "clause.header.consent",
+      "clause.project.info",
+      "clause.participant.details",
+      "clause.research.purpose",
+      "clause.participation.requirements",
+      "clause.risks.benefits",
+      "clause.confidentiality.statement",
+      "clause.data.usage",
+      "clause.withdrawal.rights",
+      "clause.consent.checkboxes",
+      "clause.signature.participant",
+      "clause.signature.researcher",
+      "clause.footer.university"
+    ],
+    "defaults": {
+      "university.name": "Swinburne University of Technology",
+      "university.address": "John Street, Hawthorn",
+      "university.city_state_postcode": "Victoria 3122",
+      "project.title": "",
+      "project.code": "",
+      "researcher.name": "",
+      "researcher.email": "",
+      "researcher.phone": "",
+      "supervisor.name": "",
+      "supervisor.email": "",
+      "participant.name": "Jason Alexander",
+      "participant.email": "",
+      "participant.phone": "",
+      "participant.organization": "",
+      "study.duration": "",
+      "study.location": "",
+      "ethics.approval.number": "",
+      "data.retention.period": "5 years"
+    }
+  }
+]

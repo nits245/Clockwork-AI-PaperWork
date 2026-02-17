@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@700&display=swap');
+
+.home {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+  
+  .home-container {
+    display: flex;
+  }
+  .welcome-section {
+    width: 48%;
+    height: 250px; 
+    margin:55px 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../../img/home/welcome.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 20px;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+
+  .welcome-section:hover {
+    transform: scale(1.01);
+  }
+  .calendar-section {
+    width: 48%; /* Adjust width for responsiveness */
+    margin: 20px;
+    background-color: #d8ecff;
+    border-radius: 15px;
+    padding: 0 20px 0 0;
+  }
+
+  
+/* Center the welcome text on the left side */
+.welcome-text {
+  flex: 0 0 50%;               /* Set the welcome text to take up 50% of the section's width */
+  text-align: left;             /* Align the text to the left */
+}
+
+.welcome-text h1 {
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 40px;              /* Adjust font size */
+  color: white;
+  line-height: 1.2;             /* Adjust line spacing */
+  margin: 0;
+}
+
+.welcome-text h1 span {
+  display: block;               /* Make "Back," appear on a new line */
+}
+
+
+.buttons-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons-section button {
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #333;
+  width: 100%;  /* Set a fixed width for all buttons */
+  height: 50px;  /* Set a fixed height for all buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* Center text inside the button */
+}
+
+/* Specific button colors */
+.btn-create {
+  background-color: #ffffff;
+  color: white;
+}
+
+.btn-create:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-view {
+  background-color: #ffffff;
+  color: white;
+}
+
+.btn-view:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-validate {
+  background-color: #50C66A;
+  color: white;
+}
+
+.btn-validate:hover {
+  background-color: #13832b;
+  color: white;
+}
+  // General styling for the entire document summary section
+.top {
+  padding: 20px;
+  margin: 0 20px 20px 20px;
+  background-color: #e2eeff; // Light background for the section
+  border-radius: 15px;
+}
+
+// Title for the section
+.title {
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+// Container for the document summary and most popular documents
+/* Container for the Document Summary */
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.doc{
+  flex: 1; /* Equal width for all items */
+  background-color: rgb(253, 253, 253);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 25px;
+  width: 180px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doc:hover{
+  transform: scale(1.01);
+}
+
+/* Set equal width and common styling for all items */
+.pop-doc, .note-section {
+  flex: 1; /* Equal width for all items */
+  background-color: rgb(253, 253, 253);
+  padding: 20px;
+  border-radius: 15px;
+  min-width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.doc .detail {
+  font-size: 100px;
+  margin-top:-50px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Styling for the content inside the boxes */
+.pop-doc .detail {
+  font-size: 100px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+/* Title for sections */
+.container-title, .note-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+}
+
+  }
+  .add-button {
+    display: relative;
+  }
+  .mid {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  margin: 0 20px 0 20px;
+  background-color: #e2eeff; // Light background for the section
+  border-radius: 15px;
+
+    .mid-container {
+      display: flex;
+      overflow-y: scroll;
+      margin: 0 10px 0 10px;
+      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+      gap: 20px; /* Space between the cards */
+      width: 100%; /* Full width */
+
+      .selected {
+        .card {
+          background-color: rgb(46, 121, 196);
+          color:white;
+        }
+      }
+    }
+
+    .card {
+      overflow: auto;
+      height: auto;
+      font-family: 'Albert Sans', sans-serif;
+      min-height: 200px;
+      max-height: 300px;
+      width: 300px;
+      border-radius: 5px;
+      padding: 0 20px 0 20px;
+      background-color: rgb(157, 186, 224);
+    }
+  }
+
+  .bottom {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #e2eeff; // Light background for the section
+    border-radius: 15px;
+
+    .bottom-left {
+      flex: 3;
+      background-color: #fff;
+      border-radius: 10px;
+      padding:20px;
+    }
+  }
+  .error {
+    visibility: hidden;   /* Initially hidden */
+    opacity: 0;           /* Invisible */
+    transition: opacity 0.3s ease, visibility 0.3s ease;  /* Smooth transition */
+    color: red;           /* Red color to indicate an error */
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px;
+  }
+  
+  .error.visible {
+    visibility: visible;  /* Make the error visible */
+    opacity: 1;           /* Fully opaque */
+  }
+  
+
+//this apply to every element include nested element and class
+a {
+  text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 4px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.236);
+}
+
+@media (max-width: 1024px) {
+  /* Stack welcome section and calendar vertically on smaller screens */
+  .home-container {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  /* Ensure full width on small screens */
+  .welcome-section, .calendar-section {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+
+  /* Reduce button sizes */
+  .buttons-section button {
+    width: 100%;
+  }
+}

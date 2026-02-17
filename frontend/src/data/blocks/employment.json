@@ -1,0 +1,275 @@
+[
+  {
+    "id": "clause.intro.fulltime",
+    "title": "Letter of Offer – Full-time",
+    "body": "This letter sets out the terms and conditions of your full-time employment with {{employer.name}} ABN {{employer.abn}}. If you agree to these terms, please sign and return a copy of this agreement within 14 days of receipt.",
+    "jurisdiction": "AU",
+    "tags": ["intro", "offer", "full-time"]
+  },
+  {
+    "id": "clause.position.fulltime",
+    "title": "Position and Duties – Full-time",
+    "body": "You will be employed on a full-time basis in the position of {{role}}, reporting directly to {{manager}} at our {{location}} office. Your key responsibilities include but are not limited to those outlined in Schedule 1 attached hereto. The Employer may reasonably vary your duties from time to time with appropriate notice and consultation.",
+    "jurisdiction": "AU",
+    "tags": ["position", "duties", "full-time"]
+  },
+  {
+    "id": "clause.commencement.fulltime",
+    "title": "Commencement of Employment – Full-time",
+    "body": "Your employment will commence on {{start_date}}. This Agreement supersedes any previous employment arrangements and does not recognise any prior service unless expressly acknowledged in writing by an authorised representative of the Employer.",
+    "jurisdiction": "AU",
+    "tags": ["commencement", "full-time"]
+  },
+  {
+    "id": "clause.probation.fulltime",
+    "title": "Probationary Period – Full-time",
+    "body": "Your employment is subject to a probationary period of {{probation_period}} months commencing from your start date. During this period, either party may terminate the employment with {{probation_notice}} week's notice. Performance reviews will be conducted at regular intervals during the probationary period.",
+    "jurisdiction": "AU",
+    "tags": ["probation", "full-time"]
+  },
+  {
+    "id": "clause.hours.fulltime",
+    "title": "Hours of Work – Full-time",
+    "body": "You will work {{ordinary_hours}} hours per week from {{work_start_time}} to {{work_end_time}}, Monday to Friday, with standard breaks as per company policy. You are expected to devote your full attention and best efforts to your duties during working hours. Reasonable additional hours may be required from time to time without additional compensation, consistent with your salaried position.",
+    "jurisdiction": "AU",
+    "tags": ["hours", "full-time", "NES"]
+  },
+  {
+    "id": "clause.remuneration.fulltime",
+    "title": "Remuneration – Full-time",
+    "body": "Your annual salary is AUD {{salary}}, inclusive of superannuation guarantee contributions. This salary is payable {{pay_frequency}} in arrears by electronic funds transfer to a nominated Australian bank account. Your salary is reviewed annually but any increase is at the sole discretion of the Employer.",
+    "jurisdiction": "AU",
+    "tags": ["remuneration", "salary", "full-time"]
+  },
+  {
+    "id": "clause.superannuation.fulltime",
+    "title": "Superannuation – Full-time",
+    "body": "In addition to your salary, the Employer will make superannuation contributions at the rate prescribed by the Superannuation Guarantee (Administration) Act 1992 (Cth), currently {{super_rate}}%, to your nominated complying superannuation fund. If you do not nominate a fund, contributions will be made to the Employer's default fund.",
+    "jurisdiction": "AU",
+    "tags": ["superannuation", "benefits", "full-time"]
+  },
+  {
+    "id": "clause.leave.fulltime",
+    "title": "Leave Entitlements – Full-time",
+    "body": "You are entitled to leave in accordance with the National Employment Standards including: (a) 4 weeks annual leave per year; (b) 10 days personal/carer's leave per year; (c) 2 days compassionate leave per occasion; (d) community service leave as required; and (e) parental leave as applicable. Long service leave applies as per state legislation after {{lsl_qualifying_period}} years of continuous service.",
+    "jurisdiction": "AU",
+    "tags": ["leave", "NES", "full-time"]
+  },
+  {
+    "id": "clause.termination.fulltime",
+    "title": "Termination of Employment – Full-time", 
+    "body": "Either party may terminate this employment by giving {{termination_notice}} weeks' written notice. The Employer may terminate immediately for serious misconduct. Upon termination, you must return all company property and are subject to post-employment restraints as detailed in Schedule 2.",
+    "jurisdiction": "AU",
+    "tags": ["termination", "full-time"]
+  },
+  {
+    "id": "clause.confidentiality",
+    "title": "Confidentiality and Intellectual Property",
+    "body": "You must maintain strict confidentiality of all Employer information including but not limited to: customer lists, pricing information, business strategies, technical data, and any proprietary information. All intellectual property created during your employment belongs to the Employer. This obligation continues indefinitely after termination.",
+    "jurisdiction": "AU",
+    "tags": ["confidentiality", "IP", "general"]
+  },
+  {
+    "id": "clause.restraint",
+    "title": "Post-Employment Restraints",
+    "body": "For a period of {{restraint_period}} months after termination, you agree not to: (a) directly or indirectly compete with the Employer within {{restraint_geography}}; (b) solicit or deal with customers of the Employer; (c) employ or solicit employees of the Employer. These restraints are reasonable and necessary to protect legitimate business interests.",
+    "jurisdiction": "AU",
+    "tags": ["restraint", "non-compete", "general"]
+  },
+  {
+    "id": "clause.code_of_conduct",
+    "title": "Code of Conduct and Policies",
+    "body": "You must comply with all Employer policies including the Code of Conduct, Work Health and Safety Policy, Equal Opportunity Policy, and IT Usage Policy. Policies may be updated from time to time and you will be notified of changes. Serious breaches may result in disciplinary action including termination.",
+    "jurisdiction": "AU",
+    "tags": ["conduct", "policies", "general"]
+  },
+  {
+    "id": "clause.performance",
+    "title": "Performance Standards and Review",
+    "body": "You are expected to perform your duties to the best of your ability and meet all reasonable performance standards. Formal performance reviews will be conducted annually, with additional reviews as necessary. Performance improvement plans may be implemented where standards are not met.",
+    "jurisdiction": "AU",
+    "tags": ["performance", "review", "general"]
+  },
+  {
+    "id": "clause.workplace_safety",
+    "title": "Workplace Health and Safety",
+    "body": "You have a duty to take reasonable care for your own health and safety and that of others in the workplace. You must comply with all safety procedures, report hazards immediately, and participate in safety training as required. The Employer is committed to providing a safe working environment.",
+    "jurisdiction": "AU",
+    "tags": ["safety", "WHS", "general"]
+  },
+  {
+    "id": "clause.dispute_resolution", 
+    "title": "Dispute Resolution",
+    "body": "Any workplace disputes should first be raised with your immediate supervisor. If unresolved, the matter may be escalated through the internal grievance procedure. External mediation or Fair Work Commission processes may be utilised if internal resolution is unsuccessful.",
+    "jurisdiction": "AU",
+    "tags": ["disputes", "grievance", "general"]
+  },
+  {
+    "id": "clause.intro.parttime",
+    "title": "Letter of Offer – Part-time",
+    "body": "This letter sets out the terms and conditions of your part-time employment with {{employer.name}} ABN {{employer.abn}}. If you agree to these terms, please sign and return a copy within 14 days.",
+    "jurisdiction": "AU",
+    "tags": ["intro", "offer", "part-time"]
+  },
+  {
+    "id": "clause.position.parttime",
+    "title": "Position and Duties – Part-time",
+    "body": "You will be employed on a part-time basis as {{role}}, reporting to {{manager}} at {{location}}. Your duties are outlined in Schedule 1 and may be reasonably varied with consultation and appropriate notice.",
+    "jurisdiction": "AU",
+    "tags": ["position", "duties", "part-time"]
+  },
+  {
+    "id": "clause.hours.parttime",
+    "title": "Hours of Work – Part-time",
+    "body": "Your ordinary hours are {{ordinary_hours_per_week}} hours per week, typically worked on {{days_of_week}} between {{work_hours_window}}. Your roster may vary by mutual agreement and reasonable business needs. You will receive at least {{roster_notice}} days' notice of roster changes.",
+    "jurisdiction": "AU",
+    "tags": ["hours", "part-time", "NES"]
+  },
+  {
+    "id": "clause.additional_hours.parttime",
+    "title": "Additional Hours – Part-time",
+    "body": "You may be offered additional hours beyond your regular schedule. Acceptance of additional hours is voluntary unless reasonably necessary for business operations. Additional hours will be paid at ordinary rates unless overtime rates apply under the relevant award.",
+    "jurisdiction": "AU",
+    "tags": ["hours", "overtime", "part-time"]
+  },
+  {
+    "id": "clause.remuneration.parttime",
+    "title": "Remuneration – Part-time",
+    "body": "You will be paid {{hourly_rate}} per hour for ordinary hours worked, paid {{pay_frequency}} by electronic transfer. Your pay includes casual loading where applicable and all statutory entitlements as per the National Employment Standards and relevant award.",
+    "jurisdiction": "AU",
+    "tags": ["remuneration", "hourly", "part-time"]
+  },
+  {
+    "id": "clause.leave.parttime",
+    "title": "Leave Entitlements – Part-time",
+    "body": "As a part-time employee, you are entitled to paid annual leave and personal/carer's leave on a pro-rata basis calculated according to your ordinary hours of work. You are also entitled to unpaid compassionate leave, community service leave, and parental leave as per the National Employment Standards.",
+    "jurisdiction": "AU",
+    "tags": ["leave", "NES", "part-time"]
+  },
+  {
+    "id": "clause.intro.casual",
+    "title": "Letter of Offer – Casual",
+    "body": "This letter confirms your casual employment with {{employer.name}} ABN {{employer.abn}}. As a casual employee, you will work on an 'as required' basis with no guarantee of ongoing work or set hours.",
+    "jurisdiction": "AU",
+    "tags": ["intro", "offer", "casual"]
+  },
+  {
+    "id": "clause.position.casual",
+    "title": "Position and Duties – Casual",
+    "body": "You will be engaged as a casual {{role}} reporting to {{manager}} at {{location}}. Your duties will be assigned on each shift and may include tasks outlined in Schedule 1 or as reasonably directed by supervisors.",
+    "jurisdiction": "AU",
+    "tags": ["position", "duties", "casual"]
+  },
+  {
+    "id": "clause.hours.casual",
+    "title": "Hours of Work – Casual",
+    "body": "There is no guarantee of minimum or maximum hours of work. Shifts will be offered based on business needs and your availability. You may decline shifts without penalty, but consistent unavailability may reduce future shift offers.",
+    "jurisdiction": "AU",
+    "tags": ["hours", "casual", "NES"]
+  },
+  {
+    "id": "clause.remuneration.casual",
+    "title": "Remuneration – Casual",
+    "body": "You will be paid {{hourly_rate}} per hour inclusive of {{casual_loading}}% casual loading in lieu of paid leave entitlements. Payment is made {{pay_frequency}} for hours actually worked during the pay period.",
+    "jurisdiction": "AU",
+    "tags": ["remuneration", "casual", "loading"]
+  },
+  {
+    "id": "clause.leave.casual",
+    "title": "Leave Entitlements – Casual",
+    "body": "As a casual employee, you are not entitled to paid annual or personal leave. However, you are entitled to unpaid compassionate leave (2 days per occasion), community service leave, and parental leave after 12 months of regular and systematic employment.",
+    "jurisdiction": "AU",
+    "tags": ["leave", "casual", "NES"]
+  },
+  {
+    "id": "clause.conversion.casual",
+    "title": "Right to Request Conversion – Casual",
+    "body": "After 12 months of regular and systematic casual employment, you may have the right to request conversion to permanent employment if you meet the eligibility criteria under the Fair Work Act 2009. Any conversion is subject to business needs and mutual agreement.",
+    "jurisdiction": "AU",
+    "tags": ["conversion", "casual", "permanent"]
+  },
+  {
+    "id": "clause.intro.contractor",
+    "title": "Service Agreement – Independent Contractor",
+    "body": "This agreement governs the provision of services by you as an independent contractor to {{employer.name}} ABN {{employer.abn}}. You acknowledge that you are not an employee and are responsible for your own tax, insurance, and superannuation obligations.",
+    "jurisdiction": "AU",
+    "tags": ["intro", "contractor", "independent"]
+  },
+  {
+    "id": "clause.services.contractor",
+    "title": "Services to be Provided",
+    "body": "You agree to provide {{services_description}} as detailed in Schedule 1. Services must be performed with due skill, care, and diligence in accordance with industry standards and any specifications provided by the Company.",
+    "jurisdiction": "AU",
+    "tags": ["services", "contractor", "scope"]
+  },
+  {
+    "id": "clause.payment.contractor",
+    "title": "Payment Terms – Contractor",
+    "body": "In consideration for the Services, the Company will pay {{contract_rate}} {{payment_basis}}. Payment is due within {{payment_terms}} days of receipt of a valid tax invoice. You are responsible for issuing invoices and managing your own taxation obligations including GST where applicable.",
+    "jurisdiction": "AU",
+    "tags": ["payment", "contractor", "invoice"]
+  },
+  {
+    "id": "clause.insurance.contractor",
+    "title": "Insurance and Liability",
+    "body": "You must maintain appropriate professional indemnity insurance of at least {{insurance_amount}} and public liability insurance as reasonably required. You indemnify the Company against any claims arising from your negligent performance of the Services.",
+    "jurisdiction": "AU",
+    "tags": ["insurance", "liability", "contractor"]
+  },
+  {
+    "id": "clause.termination.contractor",
+    "title": "Termination – Contractor Agreement",
+    "body": "Either party may terminate this agreement with {{contract_notice}} days' written notice. The Company may terminate immediately for breach of contract, poor performance, or conduct inconsistent with the Company's values or policies.",
+    "jurisdiction": "AU",
+    "tags": ["termination", "contractor"]
+  },
+  {
+    "id": "clause.expenses",
+    "title": "Expenses and Reimbursement",
+    "body": "The Employer will reimburse reasonable business expenses incurred in the course of your employment, provided such expenses are pre-approved and supported by valid receipts. Personal expenses will not be reimbursed unless specifically agreed in writing.",
+    "jurisdiction": "AU",
+    "tags": ["expenses", "reimbursement", "general"]
+  },
+  {
+    "id": "clause.technology",
+    "title": "Technology and Equipment Use",
+    "body": "Company technology and equipment must be used only for business purposes and in accordance with IT policies. Personal use is limited and must not interfere with work duties. You are responsible for the care and return of all company property.",
+    "jurisdiction": "AU",
+    "tags": ["technology", "equipment", "IT"]
+  },
+  {
+    "id": "clause.social_media",
+    "title": "Social Media and Communications",
+    "body": "You must not make public statements on behalf of the Company without authorization. Personal social media use should not reference the Company inappropriately or bring the Company into disrepute. Confidential information must never be shared on social platforms.",
+    "jurisdiction": "AU",
+    "tags": ["social media", "communications", "reputation"]
+  },
+  {
+    "id": "clause.training",
+    "title": "Training and Development",
+    "body": "The Employer may provide training opportunities to enhance your skills and performance. Mandatory training must be completed within specified timeframes. Where training incurs significant cost, a training agreement may require repayment if you voluntarily leave within {{training_bond_period}} months.",
+    "jurisdiction": "AU",
+    "tags": ["training", "development", "bond"]
+  },
+  {
+    "id": "clause.variation",
+    "title": "Variation of Terms",
+    "body": "This agreement may only be varied by written agreement signed by both parties. No oral modifications are binding. Any variations must comply with applicable employment laws and may require consultation processes where legislatively mandated.",
+    "jurisdiction": "AU",
+    "tags": ["variation", "modification", "general"]
+  },
+  {
+    "id": "clause.entire_agreement",
+    "title": "Entire Agreement",
+    "body": "This agreement, together with any attached schedules, constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements. If any provision is found to be unenforceable, the remainder of the agreement remains in effect.",
+    "jurisdiction": "AU",
+    "tags": ["entire agreement", "severability", "general"]
+  },
+  {
+    "id": "clause.governing_law",
+    "title": "Governing Law",
+    "body": "This agreement is governed by the laws of {{governing_state}} and the Commonwealth of Australia. The parties submit to the jurisdiction of the courts of {{governing_state}} and any appeals therefrom.",
+    "jurisdiction": "AU",
+    "tags": ["governing law", "jurisdiction", "general"]
+  }
+]

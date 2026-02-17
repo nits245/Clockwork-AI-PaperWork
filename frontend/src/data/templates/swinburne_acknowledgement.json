@@ -1,0 +1,32 @@
+[
+  {
+    "id": "SWINBURNE_ACK",
+    "title": "Swinburne Acknowledgement and Consent Form",
+    "category": "Academic & University",
+    "uses": [
+      "clause.header.swinburne",
+      "clause.acknowledgement.intro",
+      "clause.project.title",
+      "clause.consent.statement",
+      "clause.usage.capex",
+      "clause.usage.promotion",
+      "clause.materials.list",
+      "clause.signature.block",
+      "clause.return.instructions",
+      "clause.footer.swinburne"
+    ],
+    "defaults": {
+      "parties.name": "Swinburne University of Technology",
+      "parties.address": "John Street",
+      "parties.city": "Hawthorn",
+      "parties.state": "Victoria",
+      "parties.postcode": "3122",
+      "parties.city_state_postcode": "Hawthorn, Victoria 3122",
+      "participant.name": "Jason Alexander",
+      "project.title": "ProofVault.Global – Multi-Device Logging and Automated Threat Analysis for Safety and Peace of Mind",
+      "event.date": "20th November 2025",
+      "coordinator.name": "Tanjila Kanij",
+      "coordinator.email": "tkanij@swin.edu.au"
+    }
+  }
+]

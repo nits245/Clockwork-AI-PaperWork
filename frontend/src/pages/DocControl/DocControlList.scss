@@ -1,0 +1,101 @@
+.docControlHeader {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #f8f9fa;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 1rem;
+
+  h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .templateAction {
+    text-align: center;
+  }
+}
+
+
+
+.docControlList {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: calc(100% - 162px);
+  width: 100%;
+
+  .table {
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem;
+
+    .table-row {
+      background-color: #ffffff;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      display: grid;
+      grid-template-columns: 40% 30% 30%;
+      align-items: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+      }
+
+      .template-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .template-category {
+        color: #666;
+        font-size: 1rem;
+      }
+
+      .template-action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .parties-icon, .send-icon {
+          cursor: pointer;
+          transition: transform 0.2s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .partiesicon, .reviewicon, .sendicon, .transsendicon {
+          width: 24px;
+          height: 24px;
+        }
+
+        .transsendicon {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+

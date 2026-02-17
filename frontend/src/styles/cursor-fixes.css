@@ -1,0 +1,311 @@
+/* 
+ * Global Cursor & Text Selection Fixes for PaperWork
+ * Fixes white cursor issue in documents and improves text editing UX
+ */
+
+/* Fix cursor visibility in all text areas and contenteditable elements */
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+[contenteditable],
+[contenteditable="true"],
+.jodit-wysiwyg,
+.jodit-container,
+.jodit-workplace,
+.jodit-editor,
+.text-editor,
+.document-editor,
+.content-editable,
+.ql-editor,
+.ck-editor__editable,
+.tox-edit-area,
+.editor-content,
+.MuiInputBase-input,
+.MuiTextField-root input,
+.MuiTextField-root textarea,
+.form-control,
+.form-input,
+div[contenteditable="true"],
+span[contenteditable="true"],
+p[contenteditable="true"] {
+  cursor: text !important;
+  caret-color: #000 !important; /* Dark cursor for light backgrounds */
+  color: #000 !important; /* Ensure text is visible */
+}
+
+/* Force cursor visibility on focus */
+textarea:focus,
+input:focus,
+[contenteditable]:focus,
+[contenteditable="true"]:focus {
+  cursor: text !important;
+  caret-color: #000 !important;
+  outline-color: #007acc !important;
+}
+
+/* Dark theme cursor support */
+[data-theme="dark"] textarea,
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="password"],
+[data-theme="dark"] input[type="search"],
+[data-theme="dark"] [contenteditable],
+[data-theme="dark"] [contenteditable="true"],
+[data-theme="dark"] .jodit-wysiwyg,
+[data-theme="dark"] .jodit-container,
+[data-theme="dark"] .text-editor,
+[data-theme="dark"] .document-editor,
+[data-theme="dark"] .content-editable {
+  caret-color: #fff !important; /* White cursor for dark backgrounds */
+}
+
+/* Improve text selection visibility */
+::selection {
+  background: #007acc !important;
+  color: white !important;
+}
+
+::-moz-selection {
+  background: #007acc !important;
+  color: white !important;
+}
+
+/* Fix specific Jodit editor cursor issues */
+.jodit-wysiwyg * {
+  cursor: inherit !important;
+}
+
+/* Simple FormWizard cursor fix */
+.form-wizard .document-content[contenteditable="true"] {
+  caret-color: #000 !important;
+}
+
+/* Ensure cursor shows properly in all editing contexts */
+.jodit-container iframe {
+  cursor: text !important;
+}
+
+/* Fix for any potential cursor hiding issues */
+body,
+html {
+  cursor: default !important;
+}
+
+/* Hover states for interactive elements */
+button,
+a,
+[role="button"],
+[tabindex],
+.clickable {
+  cursor: pointer !important;
+}
+
+button:disabled,
+[disabled] {
+  cursor: not-allowed !important;
+}
+
+/* Resize cursors for resizable elements */
+.resizable,
+.resize-handle {
+  cursor: resize !important;
+}
+
+/* Text cursor for form labels that might be clickable */
+label {
+  cursor: pointer !important;
+}
+
+/* Special handling for rich text editors */
+.ql-editor,
+.ck-editor__editable,
+.tox-edit-area,
+.tox-edit-area iframe {
+  cursor: text !important;
+  caret-color: #333 !important;
+}
+
+/* Material UI text field fixes */
+.MuiTextField-root input,
+.MuiTextField-root textarea,
+.MuiOutlinedInput-input,
+.MuiInputBase-input {
+  cursor: text !important;
+  caret-color: #333 !important;
+}
+
+/* Bootstrap form control fixes */
+.form-control,
+.form-control:focus {
+  cursor: text !important;
+  caret-color: #000 !important;
+}
+
+/* Additional cursor fixes for specific content areas */
+.document-content,
+.editor-area,
+.text-content,
+.editable-content,
+.content-area,
+.typing-area,
+article,
+section.content,
+div.content,
+main .content,
+.paper-content,
+.doc-content {
+  cursor: text !important;
+}
+
+/* Fix white cursor specifically */
+* {
+  cursor: inherit !important;
+}
+
+/* Override any CSS that might hide cursor */
+*:not(button):not(a):not([role="button"]):not(.btn):not(.clickable) {
+  cursor: auto !important;
+}
+
+/* Text areas should always show text cursor */
+*[contenteditable],
+*[contenteditable="true"],
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="number"] {
+  cursor: text !important;
+  caret-color: #000 !important;
+}
+
+/* Jodit Editor specific fixes */
+.jodit-wysiwyg,
+.jodit-wysiwyg *,
+.jodit-container,
+.jodit-container *,
+iframe[src*="jodit"] {
+  cursor: text !important;
+  caret-color: #000 !important;
+}
+
+/* Force cursor color in all scenarios */
+html,
+body {
+  caret-color: #000 !important;
+}
+
+/* Remove any potential cursor hiding */
+* {
+  cursor: inherit;
+}
+
+*:not(button):not(a):not([role="button"]):not(.btn):not(.clickable):not([onclick]) {
+  cursor: default;
+}
+
+textarea,
+input,
+[contenteditable],
+[contenteditable="true"] {
+  cursor: text !important;
+}
+
+/* 
+ * Keyboard Help Tooltip Animations & Styles 
+ */
+
+/* Smooth, hardware-accelerated animations */
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 15px, 0) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes slideOutDown {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 15px, 0) scale(0.98);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#keyboard-help-tooltip {
+  /* Hardware acceleration for smooth animations */
+  will-change: transform, opacity !important;
+  transform: translate3d(0, 0, 0) !important;
+  animation: slideInUp 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  /* Smoother rendering */
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  backface-visibility: hidden !important;
+}
+
+#keyboard-help-tooltip.closing {
+  animation: slideOutDown 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Improved kbd styling for shortcuts */
+#keyboard-help-tooltip kbd {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 4px !important;
+  padding: 3px 8px !important;
+  font-size: 11px !important;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Monaco, Inconsolata, 'Roboto Mono', monospace !important;
+  font-weight: 500 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25) !important;
+  min-width: 24px !important;
+  text-align: center !important;
+}
+
+/* Hover effects for help tooltip */
+#keyboard-help-tooltip:hover {
+  backdrop-filter: blur(15px) !important;
+  background: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Dark scrollbar for help content if needed */
+#keyboard-help-tooltip *::-webkit-scrollbar {
+  width: 6px;
+}
+
+#keyboard-help-tooltip *::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#keyboard-help-tooltip *::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+#keyboard-help-tooltip *::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

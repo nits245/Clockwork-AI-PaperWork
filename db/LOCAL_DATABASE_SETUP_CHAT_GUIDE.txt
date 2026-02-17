@@ -1,0 +1,799 @@
+===============================================================================
+        PAPERWORK MODULE - LOCAL DATABASE SETUP GUIDE
+        Easy Step-by-Step Instructions for Team Members
+===============================================================================
+
+Hi! Welcome to the PaperWork Module project!
+
+This guide will help you set up your own local database so you can run the 
+backend server on your computer. Don't worry - it's easier than it looks!
+
+IMPORTANT THINGS TO KNOW FIRST:
+
+* Each team member has their OWN separate local database
+* You're NOT connecting to someone else's database
+* Your database will be on YOUR computer only
+* This setup takes about 15-20 minutes total
+
+===============================================================================
+STEP 1: CHECK IF YOU HAVE PostgreSQL INSTALLED
+===============================================================================
+
+Let's see if you already have PostgreSQL on your computer.
+
+For Windows Users:
+   1. Press Windows key + R
+   2. Type: services.msc
+   3. Press Enter
+   4. Look for "postgresql" in the list
+   
+   If you see it -> Great! Skip to Step 3
+   If you don't see it -> Continue to Step 2
+
+For Mac Users:
+   1. Open Terminal
+   2. Type: psql --version
+   3. Press Enter
+   
+   If you see a version number -> Great! Skip to Step 3
+   If you see "command not found" -> Continue to Step 2
+
+===============================================================================
+STEP 2: INSTALL PostgreSQL (Skip if you already have it)
+===============================================================================
+
+WINDOWS INSTALLATION:
+
+1. Go to: https://www.postgresql.org/download/windows/
+2. Click "Download the installer"
+3. Download the latest version (PostgreSQL 12 or higher)
+4. Run the installer (.exe file)
+5. During installation:
+   
+   WARNING - IMPORTANT - Write these down:
+   
+   * Port: Keep default (5432)
+   * Superuser password: Set a password you'll remember
+     (The default username is "postgres")
+   
+   * Components to install: Select ALL of these:
+     - PostgreSQL Server
+     - pgAdmin 4
+     - Command Line Tools
+   
+6. Click Next -> Next -> Finish
+7. Restart your computer after installation
+
+MAC INSTALLATION:
+
+1. Open Terminal
+2. Install Homebrew if you don't have it:
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+3. Install PostgreSQL:
+   brew install postgresql@14
+
+4. Start PostgreSQL:
+   brew services start postgresql@14
+
+5. The default superuser is your Mac username (no password needed initially)
+
+===============================================================================
+STEP 3: OPEN pgAdmin (PostgreSQL's Visual Tool)
+===============================================================================
+
+This is the easiest way to set up your database!
+
+1. Find and open "pgAdmin 4" on your computer:
+   * Windows: Start Menu -> pgAdmin 4
+   * Mac: Applications -> pgAdmin 4
+
+2. pgAdmin will open in your web browser (this is normal!)
+
+3. The first time you open it, you'll need to set a MASTER PASSWORD
+   * This is just for pgAdmin itself
+   * Write it down somewhere safe
+   * You'll need it every time you open pgAdmin
+
+4. On the left side, you'll see "Servers" -> "PostgreSQL"
+   * Click the arrow next to PostgreSQL to expand it
+   
+5. It will ask for your password:
+   * This is the password you set during PostgreSQL installation
+   * (Or your Mac password if you're on Mac)
+
+6. Once connected, you should see:
+   Servers -> PostgreSQL -> Databases
+
+Great! You're connected to PostgreSQL!
+
+===============================================================================
+STEP 4: GET THE SETUP FILE
+===============================================================================
+
+You need to get the database setup file from the project.
+
+1. Make sure you have the project cloned on your computer:
+   git clone <repository-url>
+
+2. Navigate to the project folder:
+   cd PaperWork-Module
+
+3. Go to the db folder - you'll find this file:
+   COMPLETE_DATABASE_SETUP.sql
+
+4. Keep this folder location handy - you'll need it in the next step!
+
+Full path will be something like:
+   C:\Users\YourName\PaperWork-Module\db\COMPLETE_DATABASE_SETUP.sql
+
+===============================================================================
+STEP 5: RUN THE SETUP SCRIPT
+===============================================================================
+
+Now we'll create your database! Two ways to do this:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+METHOD A: Using pgAdmin (EASIER - RECOMMENDED!)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. In pgAdmin, right-click on "PostgreSQL 14" (or whatever version you have)
+2. Select: Query Tool
+3. A new tab will open with a text editor
+4. Click the folder icon (Open File)
+5. Navigate to your project: PaperWork-Module\db\COMPLETE_DATABASE_SETUP.sql
+6. Click Open
+7. You'll see a LOT of SQL code - that's perfect!
+8. Click the Play/Execute/Run button at the top
+9. Wait about 10-30 seconds...
+10. Look at the bottom panel - you should see:
+
+    - CREATE DATABASE
+    - CREATE TABLE (multiple times)
+    - CREATE INDEX
+    - CREATE FUNCTION
+    - INSERT statements
+    - Final message: "Setup complete! Database 'paperwork_module' is ready."
+
+11. If you see any RED errors:
+    * Take a screenshot
+    * Share it with the team
+    * We'll help you fix it!
+
+12. If everything is GREEN:
+    SUCCESS! Your database is ready!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+METHOD B: Using Command Line (Alternative)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+For Windows PowerShell:
+
+1. Open PowerShell
+2. Navigate to the db folder:
+   cd "C:\Users\YourName\PaperWork-Module\db"
+
+3. Run this command (all on one line):
+   & "C:\Program Files\PostgreSQL\14\bin\psql.exe" -U postgres -f COMPLETE_DATABASE_SETUP.sql
+
+4. Enter your postgres password when asked
+5. Watch the output - should see lots of CREATE and INSERT messages
+6. Last line should say: "Setup complete!"
+
+For Mac Terminal:
+
+1. Open Terminal
+2. Navigate to the db folder:
+   cd ~/PaperWork-Module/db
+
+3. Run:
+   psql -U postgres -f COMPLETE_DATABASE_SETUP.sql
+
+4. Watch for the success message at the end
+
+===============================================================================
+STEP 6: VERIFY YOUR DATABASE
+===============================================================================
+
+Let's make sure everything was created correctly!
+
+In pgAdmin:
+
+1. In the left panel, right-click on "Databases"
+2. Click "Refresh"
+3. You should now see a database called: paperwork_module
+4. Click the arrow to expand it
+5. Expand: Schemas -> public -> Tables
+6. You should see 26 tables including:
+   * master_variables
+   * document_containers
+   * document_instances
+   * common_blocks
+   * identities
+   * parties
+   * and many more...
+
+7. Let's check the data! Right-click on "master_variables" table
+8. Select: View/Edit Data -> All Rows
+9. You should see 49 rows of variables like:
+   * agreement.dates.start
+   * entity.legal.name (should say "nLive Program")
+   * org.coordinator.email
+   * finance.accommodation.bond_amount
+   * etc.
+
+If you see all this -> PERFECT! Your database is fully set up!
+
+===============================================================================
+STEP 7: CREATE DATABASE USER (Security Best Practice)
+===============================================================================
+
+Right now you're using the "postgres" superuser. Let's create a dedicated user
+for the application. This is more secure!
+
+In pgAdmin Query Tool:
+
+1. Open a new Query Tool (like you did in Step 5)
+2. Copy and paste this:
+
+   CREATE USER paperwork_user WITH PASSWORD 'paperwork2024!';
+   GRANT ALL PRIVILEGES ON DATABASE paperwork_module TO paperwork_user;
+
+3. Click the Play/Run button
+4. You should see: "GRANT"
+
+5. Now run this to give permissions on all tables:
+
+   \c paperwork_module
+   GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO paperwork_user;
+   GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO paperwork_user;
+
+6. You should see multiple "GRANT" messages
+
+Perfect! Now you have a dedicated user for the application.
+
+===============================================================================
+STEP 8: CONFIGURE THE BACKEND
+===============================================================================
+
+Now we need to tell the backend how to connect to YOUR database.
+
+1. Navigate to the backend folder in your project:
+   PaperWork-Module\backend
+
+2. Look for a file called: .env
+   
+   WARNING - If you DON'T see .env:
+   * Create a new file called: .env
+   * (Just ".env" - no other name before the dot)
+   
+   In VS Code:
+   * Right-click in backend folder
+   * New File
+   * Name it: .env
+
+3. Open the .env file
+
+4. Copy and paste these lines:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=paperwork_user
+DB_PASSWORD=paperwork2024!
+DB_NAME=paperwork_module
+PORT=8800
+NODE_ENV=development
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. Save the file
+
+WARNING - IMPORTANT NOTES:
+* If you used a DIFFERENT password in Step 7, change DB_PASSWORD to match it
+* If your PostgreSQL is on a different port, change DB_PORT
+* The .env file should NOT be committed to Git (it's already in .gitignore)
+
+===============================================================================
+STEP 9: INSTALL BACKEND DEPENDENCIES
+===============================================================================
+
+Now let's install the Node.js packages the backend needs.
+
+1. Open a terminal in VS Code:
+   * Menu: Terminal -> New Terminal
+   * Or press: Ctrl + ` (backtick key)
+
+2. Navigate to backend folder:
+   cd backend
+
+3. Install dependencies:
+   npm install
+
+4. Wait for it to finish (might take 1-2 minutes)
+
+5. You should see a message like:
+   "added 150 packages" (number may vary)
+
+===============================================================================
+STEP 10: TEST THE BACKEND CONNECTION
+===============================================================================
+
+Let's make sure the backend can connect to your database!
+
+Still in the backend folder terminal:
+
+1. Start the backend server:
+   npm start
+
+   (Or if that doesn't work, try: node index.js)
+
+2. Watch the console output. You should see:
+
+   - "Database connected successfully"
+   - "Server running on port 8800"
+
+3. If you see these messages: YOU'RE DONE! Everything works!
+
+4. If you see an error like "connection refused" or "authentication failed":
+   * Double-check your .env file settings
+   * Make sure PostgreSQL is running (check services.msc on Windows)
+   * Verify the password matches what you set
+   * Ask the team for help if needed
+
+5. To stop the server: Press Ctrl + C in the terminal
+
+===============================================================================
+STEP 11: TEST AN API ENDPOINT (Optional but Recommended)
+===============================================================================
+
+Let's verify the API can read from the database!
+
+1. Keep the backend server running (npm start)
+
+2. Open your web browser
+
+3. Go to: http://localhost:8800/api/master-variables
+
+4. You should see JSON data with all 49 master variables!
+   Something like:
+   [
+     {
+       "variable_id": 1,
+       "variable_key": "agreement.dates.start",
+       "display_name": "Agreement Start Date",
+       ...
+     },
+     ...
+   ]
+
+5. If you see this -> Perfect! Your backend is fully functional!
+
+===============================================================================
+CONGRATULATIONS! YOU'RE ALL SET UP!
+===============================================================================
+
+Your local development environment is now ready!
+
+What you have now:
+* PostgreSQL installed and running
+* paperwork_module database created with 26 tables
+* 49 master variables loaded with nLive Program defaults
+* Secure database user (paperwork_user) configured
+* Backend configured to connect to your database
+* Backend dependencies installed
+* Backend server tested and working
+
+===============================================================================
+QUICK REFERENCE - COMMANDS YOU'LL USE OFTEN
+===============================================================================
+
+Start the Backend Server:
+   cd backend
+   npm start
+
+Stop the Backend Server:
+   Press Ctrl + C
+
+Check Database in pgAdmin:
+   1. Open pgAdmin 4
+   2. Connect to PostgreSQL
+   3. Expand: Servers -> PostgreSQL -> Databases -> paperwork_module
+
+View Database Tables:
+   In pgAdmin: paperwork_module -> Schemas -> public -> Tables
+
+Your Database Credentials:
+   Database: paperwork_module
+   User: paperwork_user
+   Password: paperwork2024!
+   Host: localhost
+   Port: 5432
+
+Backend API URL:
+   http://localhost:8800
+
+===============================================================================
+TROUBLESHOOTING COMMON ISSUES
+===============================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ISSUE: "psql: command not found" or "psql.exe not found"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SOLUTION:
+PostgreSQL command-line tools aren't in your system PATH.
+
+Windows Fix:
+1. Find where PostgreSQL is installed (usually C:\Program Files\PostgreSQL\14\bin)
+2. Use the full path in commands, like:
+   & "C:\Program Files\PostgreSQL\14\bin\psql.exe" -U postgres
+
+Mac Fix:
+1. Add to your PATH: echo 'export PATH="/usr/local/opt/postgresql@14/bin:$PATH"' >> ~/.zshrc
+2. Reload: source ~/.zshrc
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ISSUE: "password authentication failed for user postgres"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SOLUTION:
+You're entering the wrong password, or no password was set during installation.
+
+Fix:
+1. Open pgAdmin
+2. Right-click PostgreSQL server -> Properties
+3. Go to Connection tab
+4. See what username is configured
+5. If you forgot the password, you may need to reset it:
+   * Google: "reset postgres password [your OS]"
+   * Or ask the team for help
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ISSUE: "database paperwork_module already exists"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SOLUTION:
+You've already run the setup script before.
+
+If you want to start fresh:
+1. In pgAdmin, right-click on "paperwork_module" database
+2. Select: Delete/Drop
+3. Confirm: Yes
+4. Now run the COMPLETE_DATABASE_SETUP.sql script again
+
+WARNING: This will delete ALL data in that database!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ISSUE: Backend says "connect ECONNREFUSED 127.0.0.1:5432"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SOLUTION:
+PostgreSQL server is not running.
+
+Windows Fix:
+1. Press Windows + R
+2. Type: services.msc
+3. Find: postgresql-x64-14 (or similar)
+4. Right-click -> Start
+5. Also set Startup Type to: Automatic
+
+Mac Fix:
+1. Open Terminal
+2. Run: brew services start postgresql@14
+3. Check status: brew services list
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ISSUE: "relation 'master_variables' does not exist"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SOLUTION:
+The setup script didn't run completely or encountered errors.
+
+Fix:
+1. Drop the database (see above)
+2. Run COMPLETE_DATABASE_SETUP.sql again
+3. Check the output carefully for any RED error messages
+4. If errors appear, take a screenshot and share with the team
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ISSUE: Backend starts but API returns empty data or errors
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SOLUTION:
+Check your .env file configuration.
+
+Verify:
+1. DB_NAME=paperwork_module (not paperwork_db!)
+2. DB_USER=paperwork_user
+3. DB_PASSWORD matches what you set in Step 7
+4. No extra spaces or quotes around values
+5. File is named exactly: .env (not .env.txt)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ISSUE: "npm: command not found" or "node: command not found"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SOLUTION:
+Node.js is not installed.
+
+Fix:
+1. Go to: https://nodejs.org/
+2. Download the LTS version (Long Term Support)
+3. Run the installer
+4. Restart your terminal/command prompt
+5. Verify: node --version (should show v18 or v20)
+
+===============================================================================
+NEED HELP?
+===============================================================================
+
+If you're stuck:
+
+1. Check this troubleshooting section first
+2. Ask in the team chat - someone has probably seen this before!
+3. Share:
+   * What step you're on
+   * The exact error message (screenshot is best)
+   * Your operating system (Windows/Mac/Linux)
+
+Common things to share:
+* pgAdmin screenshot showing your database structure
+* Terminal output showing the error
+* Your .env file contents (but hide the password!)
+
+===============================================================================
+WHAT'S IN YOUR DATABASE?
+===============================================================================
+
+After setup completes, you'll have:
+
+26 Tables:
+   * master_variables - 49 system-wide variables
+   * document_containers - 5 sample templates
+   * document_instances - Created documents
+   * identities - 5 sample identities
+   * parties - 5 sample parties
+   * common_blocks - 3 reusable content blocks
+   * participant_variables - Participant-specific data
+   * cascade_tasks - Automated update tracking
+   * And 18 more supporting tables...
+
+Sample Data Included:
+   * 5 Document Templates (Trial License, Guest Intake, etc.)
+   * 5 Sample Identities (Organizations and people)
+   * 5 Sample Parties (Organizations with addresses)
+   * 3 Common Blocks (headers, footers, etc.)
+   * 49 Master Variables (nLive Program defaults)
+
+User Accounts:
+   * postgres (superuser - for admin tasks)
+   * paperwork_user (application user - for the backend)
+
+===============================================================================
+DIFFERENCES FROM PRODUCTION
+===============================================================================
+
+WARNING - IMPORTANT: Your local database is NOT connected to production!
+
+Your local database:
+* Is completely separate from any production/staging environment
+* Contains sample/test data only
+* Changes you make here won't affect anyone else
+* Is safe to experiment with
+
+This means:
+* You can safely test features
+* You can break things without worry
+* You can delete and recreate anytime
+* Perfect for learning and development
+
+When you're ready to deploy:
+* The team will have separate instructions
+* There will be a production database
+* You won't have direct access to production
+* Deployments go through proper processes
+
+===============================================================================
+MAINTENANCE AND UPDATES
+===============================================================================
+
+Updating Your Database Schema:
+
+If the team makes changes to the database structure, you'll get new migration
+scripts. Two options:
+
+Option 1 - Fresh Start (Easiest):
+1. Drop your database in pgAdmin
+2. Run COMPLETE_DATABASE_SETUP.sql again
+3. WARNING - You'll lose any test data you created
+
+Option 2 - Migration Script:
+1. The team will provide an UPDATE or MIGRATION SQL file
+2. Run it in pgAdmin Query Tool
+3. This preserves your existing data
+
+Ask the team which option to use!
+
+Cleaning Up:
+
+If your database gets messy during testing:
+
+Reset everything:
+1. pgAdmin: Right-click paperwork_module -> Delete/Drop
+2. Run COMPLETE_DATABASE_SETUP.sql again
+3. Fresh start in ~30 seconds!
+
+Reset just the data:
+1. Use DELETE statements to clear specific tables
+2. Re-run relevant sections of test_data.sql
+3. Keeps structure, resets content
+
+===============================================================================
+TIPS FOR SUCCESS
+===============================================================================
+
+Pro Tips:
+
+1. Keep pgAdmin open while developing
+   * Quickly check what's in your database
+   * Debug data issues visually
+   * Run test queries easily
+
+2. Learn these keyboard shortcuts
+   * pgAdmin Query Tool: F5 to run query
+   * VS Code Terminal: Ctrl + ` to toggle
+   * Stop backend: Ctrl + C
+
+3. Bookmark these URLs
+   * http://localhost:8800 (backend)
+   * http://localhost:3000 (frontend, when running)
+   * http://localhost:8800/api/master-variables (test endpoint)
+
+4. Keep your .env file backed up
+   * Copy it somewhere safe
+   * You'll need it if you reinstall
+   * Don't commit it to Git!
+
+5. Make notes of what works
+   * Document your setup process
+   * Note any issues you fixed
+   * Share with the team
+
+6. Test data is your friend
+   * Use the sample data to test features
+   * Create more test records as needed
+   * Don't be afraid to experiment
+
+7. Join team sync sessions
+   * See how others set things up
+   * Learn troubleshooting tips
+   * Share your discoveries
+
+===============================================================================
+NEXT STEPS AFTER SETUP
+===============================================================================
+
+Now that your database is running:
+
+1. Start the Frontend:
+   cd frontend
+   npm install
+   npm start
+   
+   Frontend will open at: http://localhost:3000
+
+2. Explore the API:
+   * Check out backend/docs/api_list.md
+   * Test endpoints in your browser
+   * Use Postman or Thunder Client for POST requests
+
+3. Review the Codebase:
+   * Read README.md files in each folder
+   * Check out the component structure
+   * Look at database schema docs
+
+4. Pick Up a Task:
+   * Check the Sprint Backlog
+   * Find a user story to work on
+   * Ask the team for guidance
+
+5. Set Up Git:
+   * Make sure you're on the right branch
+   * Create a new feature branch for your work
+   * Commit early, commit often!
+
+===============================================================================
+APPENDIX: DATABASE SCHEMA OVERVIEW
+===============================================================================
+
+Quick reference of main tables and their purposes:
+
+Core Document Tables:
+- document_containers: Document templates
+- document_instances: Created documents
+- document_versions: Version history
+- document_participants: Who has access
+
+Variables System:
+- master_variables: System-wide defaults (49 records)
+- template_variables: Template-specific overrides
+- instance_variables: Document-specific values
+- participant_variables: Participant-specific data
+
+Content Management:
+- common_blocks: Reusable content sections
+- block_versions: Block version history
+- forked_blocks: Customized block copies
+
+Identity & Party System:
+- identities: People and organizations
+- parties: Organizations with contact details
+- party_addresses: Address information
+- party_contacts: Contact information
+
+Collaboration:
+- document_notes: Comments and discussions
+- document_signatures: E-signature tracking
+- participant_groups: Team organization
+
+Automation:
+- cascade_tasks: Automated update queue
+- cascade_update_log: Update history
+
+Each table has relationships (foreign keys) connecting them together.
+Explore in pgAdmin to see the full structure!
+
+===============================================================================
+GLOSSARY
+===============================================================================
+
+**pgAdmin**: Visual tool for managing PostgreSQL databases
+**PostgreSQL/Postgres**: The database system we use
+**Schema**: Structure of database tables and relationships
+**Query**: Command to retrieve or modify data (SQL)
+**Localhost**: Your own computer (IP: 127.0.0.1)
+**Port**: Number identifying a service (5432 for PostgreSQL, 8800 for backend)
+**.env**: Environment variables file (configuration)
+**API**: Application Programming Interface (how frontend talks to backend)
+**Endpoint**: Specific URL for an API function
+**Migration**: Script to update database structure
+**Master Variables**: System-wide settings and defaults
+**Template Variables**: Document template settings
+**Instance Variables**: Values for specific documents
+**Common Blocks**: Reusable document sections
+
+===============================================================================
+FINAL CHECKLIST
+===============================================================================
+
+Before you consider yourself fully set up, verify:
+
+[ ] PostgreSQL is installed and running
+[ ] pgAdmin can connect to PostgreSQL
+[ ] Database "paperwork_module" exists
+[ ] Database has 26 tables
+[ ] master_variables table has 49 rows
+[ ] User "paperwork_user" exists with proper permissions
+[ ] .env file exists in backend folder with correct credentials
+[ ] Backend dependencies installed (npm install completed)
+[ ] Backend starts without errors (npm start works)
+[ ] API endpoint returns data (http://localhost:8800/api/master-variables)
+[ ] You can view database structure in pgAdmin
+[ ] You understand how to stop/start the backend
+
+If you can check all these boxes: CONGRATULATIONS!
+
+You're ready to start developing!
+
+===============================================================================
+
+Guide Version: 1.0
+Last Updated: October 16, 2025
+For: PaperWork Module Team Members and relevant teams
+Project: COS40005 - Swinburne University
+
+Questions? Ask in the team chat!
+
+Happy Coding!
+
+===============================================================================

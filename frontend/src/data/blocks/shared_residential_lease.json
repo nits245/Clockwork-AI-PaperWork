@@ -1,0 +1,86 @@
+[
+  {
+    "id": "lease.intro.shared",
+    "title": "SHARED RESIDENTIAL TENANCY AGREEMENT",
+    "body": "This Shared Residential Tenancy Agreement is entered into on {{lease.start_date}} between:\n\nLANDLORD: {{landlord.name}}\nAddress: {{landlord.address}}\nPhone: {{landlord.phone}}\nEmail: {{landlord.email}}\n\nTENANT(S):\n{{tenant.primary.name}} (Primary Tenant)\n{{tenant.secondary.name}} (Co-Tenant)\n{{additional_tenants}}\n\nfor the shared rental of the premises described herein.",
+    "jurisdiction": "AU",
+    "tags": ["lease", "shared", "residential"]
+  },
+  {
+    "id": "lease.property_description",
+    "title": "PROPERTY DESCRIPTION",
+    "body": "RENTAL PREMISES:\nAddress: {{property.address}}\nSuburb: {{property.suburb}}\nState: {{property.state}}\nPostcode: {{property.postcode}}\n\nProperty Details:\n- Property Type: {{property.type}}\n- Bedrooms: {{property.bedrooms}}\n- Bathrooms: {{property.bathrooms}}\n- Parking Spaces: {{property.parking}}\n- Garden/Yard: {{property.garden}}\n- Furnished: {{property.furnished}}\n\nThe premises include all fixtures and fittings as detailed in the inventory attached as Schedule A.",
+    "jurisdiction": "AU",
+    "tags": ["lease", "property", "description"]
+  },
+  {
+    "id": "lease.room_allocation",
+    "title": "ROOM ALLOCATION AND SHARED SPACES",
+    "body": "INDIVIDUAL ROOM ASSIGNMENTS:\n\nPrimary Tenant ({{tenant.primary.name}}):\n- Room: {{tenant.primary.room}}\n- Private Bathroom: {{tenant.primary.ensuite}}\n- Rent Portion: {{tenant.primary.rent_portion}}\n\nCo-Tenant ({{tenant.secondary.name}}):\n- Room: {{tenant.secondary.room}}\n- Private Bathroom: {{tenant.secondary.ensuite}}\n- Rent Portion: {{tenant.secondary.rent_portion}}\n\nSHARED SPACES:\n- Kitchen, living room, dining area\n- Laundry facilities\n- Common bathrooms (if applicable)\n- Garden/outdoor areas\n- Storage areas: {{shared.storage}}\n\nAll tenants have equal access to shared spaces and facilities.",
+    "jurisdiction": "AU",
+    "tags": ["lease", "room", "allocation"]
+  },
+  {
+    "id": "lease.rent_payment",
+    "title": "RENT AND PAYMENT TERMS",
+    "body": "RENTAL DETAILS:\n\nTotal Weekly Rent: ${{total_rent}} per week\nPayment Distribution:\n- {{tenant.primary.name}}: ${{tenant.primary.weekly_rent}} ({{tenant.primary.percentage}}%)\n- {{tenant.secondary.name}}: ${{tenant.secondary.weekly_rent}} ({{tenant.secondary.percentage}}%)\n\nPayment Terms:\n- Payment Method: {{payment_method}}\n- Payment Due: {{payment_due_date}} of each {{payment_frequency}}\n- Late Payment Fee: ${{late_fee}} after {{grace_period}} days\n- Bank Details: {{bank_details}}\n\nBOND DEPOSIT:\nTotal Bond: ${{total_bond}}\nPrimary Tenant: ${{tenant.primary.bond}}\nCo-Tenant: ${{tenant.secondary.bond}}\n\nBond held by: {{bond_authority}}",
+    "jurisdiction": "AU",
+    "tags": ["lease", "rent", "payment"]
+  },
+  {
+    "id": "lease.utilities_expenses",
+    "title": "UTILITIES AND SHARED EXPENSES",
+    "body": "UTILITY ARRANGEMENTS:\n\nIncluded in Rent:\n{{utilities_included}}\n\nTenant Responsibility (Split Equally):\n- Electricity: {{electricity_split}}\n- Gas: {{gas_split}}\n- Water usage charges: {{water_split}}\n- Internet: {{internet_split}}\n- Telephone: {{phone_split}}\n\nShared Household Expenses:\n- Cleaning supplies: Split equally\n- Garden maintenance: {{garden_responsibility}}\n- Common area supplies: Split equally\n\nUtility Connection:\n- Primary tenant responsible for: {{primary_utilities}}\n- Co-tenant responsible for: {{secondary_utilities}}\n\nAll utility bills must be shared within {{bill_sharing_period}} days of receipt.",
+    "jurisdiction": "AU",
+    "tags": ["lease", "utilities", "expenses"]
+  },
+  {
+    "id": "lease.house_rules",
+    "title": "HOUSE RULES AND SHARED LIVING GUIDELINES",
+    "body": "HOUSE RULES FOR HARMONIOUS SHARED LIVING:\n\nQuiet Hours: {{quiet_hours}}\nGuests Policy:\n- Overnight guests: {{overnight_guest_policy}}\n- Maximum guest duration: {{max_guest_stay}}\n- Guest notification: {{guest_notice_period}}\n\nCleaning Responsibilities:\n- Kitchen: {{kitchen_cleaning_roster}}\n- Bathrooms: {{bathroom_cleaning_roster}}\n- Common areas: {{common_area_cleaning}}\n- Individual rooms: Tenant responsibility\n\nShared Equipment Use:\n- Washing machine: {{laundry_schedule}}\n- Kitchen appliances: {{kitchen_usage_rules}}\n- TV/Entertainment: {{entertainment_rules}}\n\nParking:\n- Primary Tenant: {{primary_parking}}\n- Co-Tenant: {{secondary_parking}}\n- Visitor parking: {{visitor_parking}}\n\nSmoking Policy: {{smoking_policy}}\nPet Policy: {{pet_policy}}",
+    "jurisdiction": "AU",
+    "tags": ["lease", "house_rules", "guidelines"]
+  },
+  {
+    "id": "lease.maintenance_repairs",
+    "title": "MAINTENANCE AND REPAIRS",
+    "body": "MAINTENANCE RESPONSIBILITIES:\n\nLandlord Responsibilities:\n- Structural repairs and maintenance\n- Major appliance repairs (over ${{major_repair_threshold}})\n- Plumbing and electrical issues\n- Heating/cooling system maintenance\n- Garden maintenance (if specified): {{landlord_garden_duty}}\n\nTenant Responsibilities:\n- General cleanliness and hygiene\n- Minor repairs under ${{minor_repair_limit}}\n- Light bulb replacement\n- Battery replacement (smoke detectors, etc.)\n- Garden maintenance (if specified): {{tenant_garden_duty}}\n\nEmergency Repairs:\n- Contact landlord immediately: {{emergency_contact}}\n- Emergency repair authority: ${{emergency_repair_limit}}\n- After-hours emergency service: {{emergency_service}}\n\nRepair Request Process:\n1. Submit written request to landlord\n2. Include photos if applicable\n3. Response timeframe: {{repair_response_time}}\n4. Urgent repairs: {{urgent_repair_timeframe}}",
+    "jurisdiction": "AU",
+    "tags": ["lease", "maintenance", "repairs"]
+  },
+  {
+    "id": "lease.insurance_liability",
+    "title": "INSURANCE AND LIABILITY",
+    "body": "INSURANCE REQUIREMENTS:\n\nLandlord Insurance:\n- Building insurance: Landlord responsibility\n- Landlord protection insurance: {{landlord_insurance}}\n- Public liability: {{public_liability_coverage}}\n\nTenant Insurance (Highly Recommended):\n- Contents insurance for personal belongings\n- Public liability coverage\n- Temporary accommodation coverage\n\nLiability and Damage:\n- Tenants jointly and severally liable for damage\n- Individual liability for damage to assigned room: Individual tenant\n- Shared space damage: {{shared_damage_liability}}\n- Normal wear and tear: Landlord responsibility\n\nSecurity:\n- Security deposit: ${{security_deposit}}\n- Key deposit: ${{key_deposit}} per set\n- Alarm code responsibility: {{alarm_responsibility}}\n- Lost key replacement: {{key_replacement_fee}}",
+    "jurisdiction": "AU",
+    "tags": ["lease", "insurance", "liability"]
+  },
+  {
+    "id": "lease.occupancy_changes",
+    "title": "OCCUPANCY CHANGES AND SUBLETTING",
+    "body": "OCCUPANCY MODIFICATIONS:\n\nAdding New Tenants:\n- Landlord written consent required\n- New tenant must pass reference checks\n- Lease amendment required\n- Additional bond may be required\n\nTenant Departure:\n- {{departure_notice_period}} written notice required\n- Remaining tenant(s) may:\n  a) Find replacement tenant (subject to landlord approval)\n  b) Assume full lease responsibility\n  c) Terminate lease (if agreed by all parties)\n\nSubletting Policy:\n- Subletting {{subletting_allowed}}\n- If allowed, requires:\n  * Written landlord consent\n  * Subtenant background check\n  * Original tenant remains liable\n  * Maximum sublet period: {{max_sublet_period}}\n\nTemporary Absence:\n- Absence over {{temp_absence_threshold}} days requires notification\n- Rent obligation continues during absence\n- Utility cost sharing continues",
+    "jurisdiction": "AU",
+    "tags": ["lease", "occupancy", "subletting"]
+  },
+  {
+    "id": "lease.inspection_entry",
+    "title": "INSPECTIONS AND RIGHT OF ENTRY",
+    "body": "PROPERTY INSPECTIONS:\n\nRoutine Inspections:\n- Frequency: {{inspection_frequency}}\n- Notice period: {{inspection_notice}} days written notice\n- Inspection window: {{inspection_time_window}}\n- Inspection checklist provided in advance\n\nEntry Rights:\nLandlord may enter premises with appropriate notice for:\n- Routine inspections\n- Necessary repairs and maintenance\n- Emergency situations (immediate entry)\n- Showing property to prospective tenants (during final {{showing_period}})\n- Property valuations\n\nTenant Rights:\n- Right to be present during inspections\n- Right to reschedule inspection once with {{reschedule_notice}} notice\n- Right to receive inspection report within {{report_timeframe}} days\n- Right to privacy and quiet enjoyment\n\nEntry Notice Requirements:\n- Non-emergency entry: {{entry_notice_period}} hours written notice\n- Emergency entry: No notice required\n- Entry times: Between {{entry_start_time}} and {{entry_end_time}}",
+    "jurisdiction": "AU",
+    "tags": ["lease", "inspection", "entry"]
+  },
+  {
+    "id": "lease.termination_conditions",
+    "title": "LEASE TERMINATION CONDITIONS",
+    "body": "TERMINATION SCENARIOS:\n\nFixed Term Lease:\n- Natural expiry: {{lease_end_date}}\n- Early termination: {{early_termination_conditions}}\n- Break lease fee: {{break_lease_penalty}}\n\nPeriodic Lease:\n- Tenant notice: {{tenant_notice_period}} days\n- Landlord notice: {{landlord_notice_period}} days\n- No grounds termination: {{no_grounds_notice}}\n\nTermination for Breach:\n- Rent arrears: {{rent_arrears_notice}} days notice\n- Breach of terms: {{breach_notice_period}} days to remedy\n- Serious breach: {{serious_breach_notice}} days notice\n\nEnd of Tenancy Obligations:\n- Professional cleaning: {{cleaning_requirement}}\n- Carpet cleaning: {{carpet_cleaning}}\n- Repair of tenant damage\n- Return all keys and garage remotes\n- Provide forwarding address for bond return\n\nBond Return:\n- Timeframe: {{bond_return_timeframe}} days after vacating\n- Condition: Property returned in original condition (fair wear excepted)\n- Deductions itemized in writing",
+    "jurisdiction": "AU",
+    "tags": ["lease", "termination", "conditions"]
+  },
+  {
+    "id": "lease.dispute_resolution",
+    "title": "DISPUTE RESOLUTION AND LEGAL MATTERS",
+    "body": "DISPUTE RESOLUTION PROCESS:\n\nBetween Tenants:\n1. Direct communication and negotiation\n2. Mediation through {{tenant_mediation_service}}\n3. Seek advice from tenancy advocacy services\n4. Legal proceedings if necessary\n\nTenant-Landlord Disputes:\n1. Written complaint to landlord\n2. Mediation through {{tenancy_tribunal}}\n3. Application to tenancy tribunal\n4. Appeal processes as available\n\nEmergency Contacts:\n- Landlord: {{landlord_emergency}}\n- Property Manager: {{property_manager}}\n- Emergency Repairs: {{emergency_repairs}}\n- Tenancy Advice: {{tenancy_advice_service}}\n\nLegal Compliance:\n- Agreement complies with {{tenancy_act}}\n- Jurisdiction: {{court_jurisdiction}}\n- Consumer protection laws apply\n- Fair trading legislation applies\n\nRecord Keeping:\n- All communications in writing\n- Photo evidence for disputes\n- Keep copies of all payments\n- Maintain inspection records",
+    "jurisdiction": "AU",
+    "tags": ["lease", "dispute", "legal"]
+  }
+]

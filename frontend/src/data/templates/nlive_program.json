@@ -1,0 +1,413 @@
+[
+  {
+    "id": "NLIVE_PARTICIPANT_BASIC",
+    "title": "nLive Participant Agreement (Basic)",
+    "category": "nLive Program",
+    "uses": [
+      "REF-001",
+      "REF-002",
+      "REF-003",
+      "REF-006",
+      "REF-007"
+    ],
+    "defaults": {
+      "entity.trading.name": "nLive Program",
+      "entity.legal.name": "nLive Pty Ltd",
+      "entity.legal.acn": "123 456 789",
+      "location.address.full": "123 Example Street, Melbourne VIC 3000",
+      "org.coordinator.name": "Program Coordinator",
+      "org.coordinator.role": "Operations Manager",
+      "org.coordinator.phone": "+61 3 9999 9999",
+      "org.coordinator.email": "coordinator@nlive.org.au",
+      "org.emergency.name": "Emergency Contact",
+      "org.emergency.role": "Director",
+      "org.emergency.phone": "+61 400 000 000",
+      "participant.name": "Jason Alexander",
+      "participant.email": "",
+      "participant.phone": ""
+    }
+  },
+  {
+    "id": "NLIVE_ROOM_AGREEMENT",
+    "title": "nLive Room Sharing Agreement",
+    "category": "nLive Program",
+    "uses": [
+      "REF-001",
+      "REF-006",
+      "REF-010",
+      "REF-011"
+    ],
+    "defaults": {
+      "entity.trading.name": "nLive Program",
+      "entity.legal.name": "nLive Pty Ltd",
+      "entity.legal.acn": "123 456 789",
+      "location.address.full": "123 Example Street, Melbourne VIC 3000",
+      "org.coordinator.name": "Program Coordinator",
+      "org.coordinator.role": "Operations Manager",
+      "org.coordinator.phone": "+61 3 9999 9999",
+      "org.coordinator.email": "coordinator@nlive.org.au",
+      "participant.name": "Jason Alexander",
+      "room.type": "shared",
+      "room.number": "",
+      "room.capacity": "2"
+    }
+  },
+  {
+    "id": "NLIVE_HOUSEHOLD_AGREEMENT",
+    "title": "nLive Household Community Agreement",
+    "category": "nLive Program",
+    "uses": [
+      "REF-001",
+      "REF-002",
+      "REF-013",
+      "REF-014",
+      "REF-015"
+    ],
+    "defaults": {
+      "entity.trading.name": "nLive Program",
+      "entity.legal.name": "nLive Pty Ltd",
+      "entity.legal.acn": "123 456 789",
+      "location.address.full": "123 Example Street, Melbourne VIC 3000",
+      "org.coordinator.name": "Program Coordinator",
+      "org.coordinator.role": "Operations Manager",
+      "org.coordinator.phone": "+61 3 9999 9999",
+      "org.coordinator.email": "coordinator@nlive.org.au",
+      "participant.name": "Jason Alexander",
+      "household.member.count": "4"
+    }
+  },
+  {
+    "id": "NLIVE_COMPLETE_AGREEMENT",
+    "title": "nLive Complete Participant Agreement",
+    "category": "nLive Program",
+    "uses": [
+      "REF-001",
+      "REF-002",
+      "REF-003",
+      "REF-004",
+      "REF-005",
+      "REF-006",
+      "REF-007",
+      "REF-008",
+      "REF-009",
+      "REF-010",
+      "REF-011",
+      "REF-012",
+      "REF-013",
+      "REF-014",
+      "REF-015",
+      "REF-016",
+      "REF-017",
+      "REF-018",
+      "REF-019",
+      "REF-020",
+      "REF-021",
+      "REF-022",
+      "REF-023",
+      "REF-024",
+      "REF-025",
+      "REF-026",
+      "REF-027"
+    ],
+    "defaults": {
+      "entity.trading.name": "nLive Program",
+      "entity.legal.name": "nLive Pty Ltd",
+      "entity.legal.acn": "123 456 789",
+      "location.address.full": "123 Example Street, Melbourne VIC 3000",
+      "org.coordinator.name": "Program Coordinator",
+      "org.coordinator.role": "Operations Manager",
+      "org.coordinator.phone": "+61 3 9999 9999",
+      "org.coordinator.email": "coordinator@nlive.org.au",
+      "org.emergency.name": "Emergency Contact",
+      "org.emergency.role": "Director",
+      "org.emergency.phone": "+61 400 000 000",
+      "participant.name": "Jason Alexander",
+      "participant.email": "",
+      "participant.phone": "",
+      "participant.dob": "",
+      "participant.emergency.name": "",
+      "participant.emergency.phone": "",
+      "participant.emergency.relationship": "",
+      "household.member.count": "4",
+      "room.type": "shared",
+      "room.number": "",
+      "room.capacity": "2"
+    }
+  },
+  {
+    "id": "NLIVE_TRIAL_PARTICIPATION",
+    "title": "Trial Participation Agreement (Guest Status)",
+    "category": "nLive Program",
+    "uses": [
+      "REF-001",
+      "REF-002",
+      "REF-003",
+      "REF-004",
+      "REF-005",
+      "REF-008",
+      "REF-011",
+      "REF-015",
+      "REF-025"
+    ],
+    "defaults": {
+      "entity.trading.name": "nLive Program",
+      "entity.legal.name": "nLive Pty Ltd",
+      "entity.legal.acn": "123 456 789",
+      "premises.address.full": "123 Example Street, Melbourne VIC 3000",
+      "org.coordinator.name": "Program Coordinator",
+      "org.coordinator.role": "Operations Manager",
+      "org.coordinator.phone": "+61 3 9999 9999",
+      "org.coordinator.email": "coordinator@nlive.org.au",
+      "participant.personal.full_name": "Jason Alexander",
+      "participant.personal.preferred_name": "Jason",
+      "participant.contact.phone": "",
+      "participant.contact.email": "",
+      "participant.address.current": "",
+      "participant.emergency.name": "",
+      "participant.emergency.phone": "",
+      "participant.emergency.relationship": "",
+      "agreement.dates.start": "",
+      "agreement.dates.end": "",
+      "limits.trial.min_days": "14",
+      "limits.trial.max_days": "28",
+      "deposits.goodwill.amount": "200",
+      "hours.quiet.winter.start": "10:00pm",
+      "hours.quiet.winter.end": "7:00am",
+      "hours.quiet.summer.start": "10:30pm",
+      "hours.quiet.summer.end": "7:00am",
+      "fees.violations.smoking": "150"
+    }
+  },
+  {
+    "id": "NLIVE_PROBATION_TENANCY",
+    "title": "Probation Tenancy Agreement",
+    "category": "nLive Program",
+    "uses": [
+      "REF-001",
+      "REF-002",
+      "REF-003",
+      "REF-004",
+      "REF-005",
+      "REF-006",
+      "REF-008",
+      "REF-011",
+      "REF-026"
+    ],
+    "defaults": {
+      "entity.trading.name": "nLive Program",
+      "entity.legal.name": "nLive Pty Ltd",
+      "entity.legal.acn": "123 456 789",
+      "location.address.full": "123 Example Street, Melbourne VIC 3000",
+      "location.premises.classification": "Class 4",
+      "org.coordinator.name": "Program Coordinator",
+      "org.coordinator.role": "Operations Manager",
+      "org.coordinator.phone": "+61 3 9999 9999",
+      "org.coordinator.email": "coordinator@nlive.org.au",
+      "participant.personal.full_name": "Jason Alexander",
+      "participant.contact.phone": "",
+      "participant.contact.email": "",
+      "participant.emergency.name": "",
+      "participant.emergency.phone": "",
+      "agreement.dates.start": "",
+      "agreement.dates.end": "",
+      "room.assignment.number": "",
+      "finance.accommodation.weekly_rent": "200",
+      "finance.commercial.equipment_deposit": "500",
+      "legal.tenancy_act": "Victorian Residential Tenancies Act 1997"
+    }
+  },
+  {
+    "id": "NLIVE_FLEXIBLE_TENANCY",
+    "title": "Flexible Tenancy Model Agreement",
+    "category": "nLive Program",
+    "uses": [
+      "REF-001",
+      "REF-003",
+      "REF-004",
+      "REF-005",
+      "REF-006",
+      "REF-008",
+      "REF-009",
+      "REF-011",
+      "REF-012",
+      "REF-018",
+      "REF-019",
+      "REF-020"
+    ],
+    "defaults": {
+      "entity.trading.name": "nLive Program",
+      "entity.legal.name": "nLive Pty Ltd",
+      "entity.legal.acn": "123 456 789",
+      "location.address.full": "123 Example Street, Melbourne VIC 3000",
+      "location.premises.classification": "Class 4",
+      "org.coordinator.name": "Program Coordinator",
+      "org.coordinator.role": "Operations Manager",
+      "org.coordinator.phone": "+61 3 9999 9999",
+      "org.coordinator.email": "coordinator@nlive.org.au",
+      "participant.personal.full_name": "Jason Alexander",
+      "participant.contact.phone": "",
+      "participant.contact.email": "",
+      "participant.address.current": "",
+      "agreement.dates.start": "",
+      "agreement.dates.end": "",
+      "accommodation.shared_room.weekly": "200",
+      "accommodation.room_1.weekly": "350",
+      "accommodation.room_1.max_occupants": "3",
+      "accommodation.room_1.preferred_occupants": "2",
+      "accommodation.room_2.weekly": "300",
+      "accommodation.room_2.max_occupants": "2",
+      "accommodation.room_3.weekly": "300",
+      "accommodation.room_3.max_occupants": "2",
+      "legal.tenancy_act": "Victorian Residential Tenancies Act 1997",
+      "hours.quiet.winter.start": "10:00pm",
+      "hours.quiet.winter.end": "7:00am",
+      "hours.quiet.summer.start": "10:30pm",
+      "hours.quiet.summer.end": "7:00am"
+    }
+  },
+  {
+    "id": "NLIVE_STANDARD_GROUP_LEASE",
+    "title": "Standard Group Lease Agreement",
+    "category": "nLive Program",
+    "uses": [
+      "REF-001",
+      "REF-004",
+      "REF-005",
+      "REF-006",
+      "REF-008",
+      "REF-011",
+      "REF-012",
+      "REF-022",
+      "REF-024"
+    ],
+    "defaults": {
+      "entity.trading.name": "nLive Program",
+      "entity.legal.name": "nLive Pty Ltd",
+      "entity.legal.acn": "123 456 789",
+      "location.address.full": "123 Example Street, Melbourne VIC 3000",
+      "location.premises.classification": "Class 4",
+      "org.coordinator.name": "Program Coordinator",
+      "org.coordinator.role": "Operations Manager",
+      "org.coordinator.phone": "+61 3 9999 9999",
+      "org.coordinator.email": "coordinator@nlive.org.au",
+      "agreement.dates.start": "",
+      "agreement.dates.end": "",
+      "finance.accommodation.weekly_rent": "200",
+      "legal.tenancy_act": "Victorian Residential Tenancies Act 1997"
+    }
+  },
+  {
+    "id": "NLIVE_PROGRAM_SKILLS",
+    "title": "Program and Skills Training Agreement",
+    "category": "nLive Program",
+    "uses": [
+      "REF-001",
+      "REF-002",
+      "REF-003",
+      "REF-005",
+      "REF-008",
+      "REF-013",
+      "REF-026"
+    ],
+    "defaults": {
+      "entity.trading.name": "nLive Program",
+      "premises.address.full": "123 Example Street, Melbourne VIC 3000",
+      "org.coordinator.name": "Program Coordinator",
+      "org.coordinator.role": "Operations Manager",
+      "org.coordinator.phone": "+61 3 9999 9999",
+      "org.coordinator.email": "coordinator@nlive.org.au",
+      "participant.personal.full_name": "Jason Alexander",
+      "participant.personal.preferred_name": "Jason",
+      "participant.contact.phone": "",
+      "participant.contact.email": "",
+      "participant.address.current": "",
+      "participant.emergency.name": "",
+      "participant.emergency.phone": "",
+      "participant.emergency.relationship": "",
+      "program.hours.min_weekly": "10",
+      "program.hours.max_weekly": "25",
+      "program.services.employment_type": "Disability Support",
+      "limits.employment.eligibility_months": "12"
+    }
+  },
+  {
+    "id": "NLIVE_MISSION_ROOM",
+    "title": "Mission Room Accommodation Agreement",
+    "category": "nLive Program",
+    "uses": [
+      "REF-001",
+      "REF-002",
+      "REF-006",
+      "REF-010",
+      "REF-013"
+    ],
+    "defaults": {
+      "premises.address.full": "123 Example Street, Melbourne VIC 3000",
+      "participant.personal.full_name": "Jason Alexander",
+      "participant.personal.preferred_name": "Jason",
+      "participant.contact.phone": "",
+      "participant.contact.email": "",
+      "participant.address.current": "",
+      "participant.emergency.name": "",
+      "participant.emergency.phone": "",
+      "participant.emergency.relationship": "",
+      "legal.jurisdiction": "Victoria",
+      "legal.tenancy_act": "Residential Tenancies Act 1997"
+    }
+  },
+  {
+    "id": "NLIVE_PERSONAL_TRANSITION",
+    "title": "Personal Transition Agreement",
+    "category": "nLive Program",
+    "uses": [
+      "REF-001",
+      "REF-005",
+      "REF-022"
+    ],
+    "defaults": {
+      "location.address.full": "123 Example Street, Melbourne VIC 3000",
+      "agreement.dates.transition_effective": "",
+      "participant.personal.full_name": "Jason Alexander",
+      "org.coordinator.name": "Program Coordinator",
+      "org.coordinator.role": "Operations Manager",
+      "org.coordinator.phone": "+61 3 9999 9999",
+      "org.coordinator.email": "coordinator@nlive.org.au",
+      "finance.accommodation.weekly_rent": "200"
+    }
+  },
+  {
+    "id": "NLIVE_EXCLUDED_ROOM_NOTICE",
+    "title": "Lease Excluded Room Notice",
+    "category": "nLive Program",
+    "uses": [
+      "REF-018"
+    ],
+    "defaults": {
+      "entity.legal.name": "nLive Pty Ltd",
+      "entity.legal.acn": "123 456 789",
+      "entity.trading.name": "nLive Program",
+      "contact.primary.name": "Program Coordinator",
+      "contact.primary.phone": "+61 3 9999 9999",
+      "premises.address.full": "123 Example Street, Melbourne VIC 3000",
+      "hours.quiet.winter.start": "10:00pm",
+      "hours.quiet.winter.end": "7:00am",
+      "hours.quiet.summer.start": "10:30pm",
+      "hours.quiet.summer.end": "7:00am"
+    }
+  },
+  {
+    "id": "NLIVE_MIXED_OCCUPANCY_NOTICE",
+    "title": "Mixed Occupancy Room Notice",
+    "category": "nLive Program",
+    "uses": [
+      "REF-009"
+    ],
+    "defaults": {
+      "org.coordinator.name": "Program Coordinator",
+      "org.coordinator.role": "Operations Manager",
+      "org.coordinator.phone": "+61 3 9999 9999",
+      "entity.trading.name": "nLive Program",
+      "location.address.full": "123 Example Street, Melbourne VIC 3000"
+    }
+  }
+]

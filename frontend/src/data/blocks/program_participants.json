@@ -1,0 +1,93 @@
+[
+  {
+    "id": "program.intro.research",
+    "title": "RESEARCH PROGRAM PARTICIPATION AGREEMENT",
+    "body": "This Agreement is entered into between {{institution.name}} (\"Institution\") and {{participant.full_name}} (\"Participant\") regarding participation in the {{program.title}} research program.\n\nBy signing this agreement, the Participant agrees to take part in the research program under the terms and conditions outlined below.",
+    "jurisdiction": "AU",
+    "tags": ["program", "research", "participation"]
+  },
+  {
+    "id": "program.intro.training",
+    "title": "TRAINING PROGRAM PARTICIPATION AGREEMENT",
+    "body": "This Agreement is entered into between {{institution.name}} (\"Institution\") and {{participant.full_name}} (\"Participant\") regarding participation in the {{program.title}} training program.\n\nThe Institution agrees to provide training services and the Participant agrees to actively engage in the program activities as outlined herein.",
+    "jurisdiction": "AU",
+    "tags": ["program", "training", "participation"]
+  },
+  {
+    "id": "program.intro.internship",
+    "title": "INTERNSHIP PROGRAM AGREEMENT",
+    "body": "This Agreement is entered into between {{institution.name}} (\"Host Organization\") and {{participant.full_name}} (\"Intern\") regarding participation in the {{program.title}} internship program.\n\nThis internship is designed to provide practical work experience and professional development opportunities.",
+    "jurisdiction": "AU",
+    "tags": ["program", "internship", "participation"]
+  },
+  {
+    "id": "program.eligibility",
+    "title": "ELIGIBILITY REQUIREMENTS",
+    "body": "To participate in this program, the Participant must:\n\na) Be at least {{min_age}} years of age\nb) Meet the academic requirements: {{academic_requirements}}\nc) Have completed prerequisite training: {{prerequisites}}\nd) Maintain {{gpa_requirement}} GPA or equivalent\ne) Provide proof of {{insurance_type}} insurance coverage\nf) Pass background check requirements as applicable",
+    "jurisdiction": "AU",
+    "tags": ["program", "eligibility", "requirements"]
+  },
+  {
+    "id": "program.duration",
+    "title": "PROGRAM DURATION AND SCHEDULE",
+    "body": "Program Duration: {{program.duration}}\nStart Date: {{program.start_date}}\nEnd Date: {{program.end_date}}\n\nSchedule Details:\n- Meeting Days: {{meeting_days}}\n- Meeting Times: {{meeting_times}}\n- Location: {{program.location}}\n- Total Hours: {{total_hours}} hours\n\nThe program schedule may be subject to modifications with {{notice_period}} days written notice.",
+    "jurisdiction": "AU",
+    "tags": ["program", "duration", "schedule"]
+  },
+  {
+    "id": "program.responsibilities.participant",
+    "title": "PARTICIPANT RESPONSIBILITIES",
+    "body": "The Participant agrees to:\n\na) Attend all scheduled sessions and activities\nb) Complete assigned tasks and assessments on time\nc) Maintain professional conduct and respect for others\nd) Follow all safety protocols and institutional policies\ne) Maintain confidentiality of sensitive information\nf) Provide feedback and evaluations as requested\ng) Notify the Institution of any conflicts or issues promptly\nh) Commit {{time_commitment}} hours per week to program activities",
+    "jurisdiction": "AU",
+    "tags": ["program", "responsibilities", "participant"]
+  },
+  {
+    "id": "program.responsibilities.institution",
+    "title": "INSTITUTION RESPONSIBILITIES",
+    "body": "The Institution agrees to:\n\na) Provide qualified supervision and mentorship\nb) Ensure a safe and supportive learning environment\nc) Deliver program content as outlined in the curriculum\nd) Provide necessary resources and materials\ne) Maintain participant records confidentially\nf) Offer {{support_services}} support services\ng) Provide {{certification_type}} upon successful completion\nh) Ensure equal opportunity and non-discrimination",
+    "jurisdiction": "AU",
+    "tags": ["program", "responsibilities", "institution"]
+  },
+  {
+    "id": "program.assessment",
+    "title": "ASSESSMENT AND EVALUATION",
+    "body": "Participant progress will be evaluated through:\n\na) Regular performance assessments\nb) {{assessment_frequency}} formal evaluations\nc) Completion of required projects and assignments\nd) Peer and supervisor feedback\ne) Self-reflection and portfolio development\n\nGrading System: {{grading_system}}\nPassing Grade: {{passing_grade}}\n\nParticipants must maintain satisfactory progress to continue in the program.",
+    "jurisdiction": "AU",
+    "tags": ["program", "assessment", "evaluation"]
+  },
+  {
+    "id": "program.intellectual_property",
+    "title": "INTELLECTUAL PROPERTY RIGHTS",
+    "body": "Any intellectual property, research findings, or creative works developed during the program shall be governed as follows:\n\na) Pre-existing IP remains with original owner\nb) Program-related IP: {{ip_ownership}}\nc) Joint discoveries: {{joint_ip_terms}}\nd) Publication rights: {{publication_rights}}\ne) Attribution requirements: {{attribution_policy}}\n\nParticipants agree to disclose any potential IP conflicts before program commencement.",
+    "jurisdiction": "AU",
+    "tags": ["program", "intellectual_property", "rights"]
+  },
+  {
+    "id": "program.confidentiality",
+    "title": "CONFIDENTIALITY AND NON-DISCLOSURE",
+    "body": "The Participant acknowledges that they may have access to confidential information including:\n\na) Research data and methodologies\nb) Institutional proprietary information\nc) Personal information of other participants\nd) Commercial and business information\n\nThe Participant agrees to:\n- Maintain strict confidentiality during and after the program\n- Not disclose confidential information to third parties\n- Use information solely for program purposes\n- Return all materials upon program completion\n\nThis obligation continues for {{confidentiality_period}} after program completion.",
+    "jurisdiction": "AU",
+    "tags": ["program", "confidentiality", "nda"]
+  },
+  {
+    "id": "program.stipend",
+    "title": "STIPEND AND FINANCIAL ARRANGEMENTS",
+    "body": "Financial Arrangements:\n\nStipend Amount: {{stipend_amount}} per {{stipend_frequency}}\nPayment Schedule: {{payment_schedule}}\nPayment Method: {{payment_method}}\n\nAdditional Benefits:\n- Travel allowance: {{travel_allowance}}\n- Meal allowance: {{meal_allowance}}\n- Equipment provided: {{equipment_provided}}\n- Insurance coverage: {{insurance_coverage}}\n\nTax obligations are the responsibility of the Participant.",
+    "jurisdiction": "AU",
+    "tags": ["program", "stipend", "financial"]
+  },
+  {
+    "id": "program.termination",
+    "title": "TERMINATION AND WITHDRAWAL",
+    "body": "This agreement may be terminated by:\n\na) Mutual consent of both parties\nb) Completion of program requirements\nc) Participant withdrawal with {{withdrawal_notice}} notice\nd) Institution termination for cause including:\n   - Violation of program policies\n   - Unsatisfactory performance\n   - Misconduct or breach of agreement\n\nUpon termination:\n- All materials must be returned\n- Outstanding obligations must be fulfilled\n- Final evaluations will be completed\n- Pro-rated stipend adjustments may apply",
+    "jurisdiction": "AU",
+    "tags": ["program", "termination", "withdrawal"]
+  },
+  {
+    "id": "program.dispute_resolution",
+    "title": "DISPUTE RESOLUTION",
+    "body": "Any disputes arising from this agreement shall be resolved through:\n\n1. Direct discussion between parties\n2. Mediation through {{mediation_service}}\n3. Arbitration if mediation fails\n4. Legal proceedings as a last resort\n\nGoverning Law: {{governing_law}}\nJurisdiction: {{jurisdiction_location}}\n\nBoth parties agree to attempt resolution in good faith before pursuing formal legal action.",
+    "jurisdiction": "AU",
+    "tags": ["program", "dispute", "resolution"]
+  }
+]

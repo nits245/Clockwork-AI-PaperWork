@@ -1,0 +1,422 @@
+import React, { useState, useEffect, useRef } from "react";
+import "./CustomizeDoc.scss";
+import Doc from "../../img/home/doc.svg";
+import TextEditor from "../../components/TextEditor/TextEditor";
+import Parties from "../../components/Parties/Parties";
+import Terms from "../../components/Terms/Terms";
+import SignatureConfig from "../../components/SignatureConfig/SignatureConfig";
+import SuccessfulPage from "./SuccessfulPage";
+import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
+import uuid from "react-uuid";
+import emailjs from "@emailjs/browser";
+import CustomizeNDAContent from "./templates/CustomizeNDAContent";
+import CustomizeEmploymentContent from "./templates/CustomizeEmploymentContent";
+import CustomizeLeaseContent from "./templates/CustomizeLeaseContent";
+import CustomizeServiceContent from "./templates/CustomizeServiceContent";
+import CustomizeSalesContent from "./templates/CustomizeSalesContent";
+
+export default function CustomizeDoc() {
+  //the id that get from the params
+  let { id } = useParams();
+  let { type } = useParams();
+  //const for the template_id
+  let templateID = "";
+  //setting the doc title for the document
+  const [docTitle, setDocTitle] = useState(""); // default value
+  const [data, setData] = useState([]);
+  const [templateSelect, setTemplateSelect] = useState();
+  //this is the state for the term of the doc
+  const [terms, setDocTerms] = useState("");
+  //GET data from database
+  //this is for the navigation
+  const navigate = useNavigate();
+  
+  if (data.length === 0 || data?.some((item) => item.template.type === id)) {
+  } else {
+    navigate("/createDoc");
+  }
+  useEffect(() => {
+    const apiUrl = `${process.env.REACT_APP_BACKEND_URL}/view-document/default-templates`;
+
+    axios
+      .get(apiUrl)
+      .then((response) => {
+        setData(response.data);
+        if (!templateSelect && response.data.length > 0) {
+          setTemplateSelect(response.data[0].id);
+        }
+        if (type === "blank") {
+          const item = response.data.find((item) => item.template.type === id);
+          if (item) {
+            const rawDocTitle = item.docTitle;
+            const cleanedTitle = rawDocTitle.replace(/<\/?title>/g, "");
+            setDocTitle(cleanedTitle);
+            setDocContent(cleanedTitle);
+            setDocTerms("");
+          }
+        } else {
+          const item = response.data.find((item) => item.template.type === id);
+          if (item) {
+            const rawDocTitle = item.docTitle;
+            const cleanedTitle = rawDocTitle.replace(/<\/?title>/g, "");
+            setDocTitle(cleanedTitle);
+            setDocContent(cleanedTitle);
+            setDocTerms(item?.template?.term);
+          }
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
+      });
+    getParties();
+  }, [templateSelect, id, type]);
+
+  const [selectedParty] = useState("");
+
+  const editor = useRef(null);
+  // const for managing the selected style
+  const [selected, setSelected] = useState(1);
+  //this is the state for the title
+  const [content, setDocContent] = useState("");
+  //state for the parties
+
+  // console.log(partyList);
+  // this is the state for the input list
+  const [inputList, setInputList] = useState([]);
+  //state that saving for the signature config
+  const [savedItem, setSaveItem] = useState([]);
+  //state that to handle the successful alert
+  const [showAlert, setShowAlert] = useState(false);
+
+  const [partyList, setPartyList] = useState([
+    {
+      id: uuid(),
+      selectedOption: "Select Parties Name", //Manage the selected option state seperately for each dropdown item
+      parties_email: "",
+      parties_id: "",
+    },
+  ]);
+  // Function to handle saving the content
+  const handleSave = () => {
+    if (
+      partyList?.filter(
+        (x) => x.parties_id !== "" && x.parties_id !== undefined
+      ).length === 0
+    ) {
+      alert("Please enter at least one party");
+      setSelected(2);
+      return;
+    }
+
+    if (content === "<p><br></p>" || terms === "<p><br></p>" || terms === "") {
+      //this is for the title that we replace
+      alert("Put the content inside Title or Terms");
+    } else {
+      const arrayofEmail = partyList?.map((item) => item.parties_email);
+      sendDataToTheTemplateEndpoint(arrayofEmail);
+    }
+  };
+  //handle close modal
+  const handleClose = () => {
+    setShowAlert(!showAlert);
+    // navigate("/createDoc");
+  };
+  //handle alert
+  const handleAlert = () => {
+    setShowAlert(true);
+  };
+
+  //handle cancel
+  const handleCancel = () => {
+    const userConfirmed = window.confirm(
+      "Are you sure you want to cancel? Changes that you made may not be saved."
+    );
+
+    if (userConfirmed) {
+      //remove the data of localStorage from Parties
+      localStorage.removeItem("EditItems");
+      //<Link> does not able to work here use anchor instead
+      const anchor = document.createElement("a");
+      anchor.href = "/createDoc";
+      anchor.click();
+    }
+  };
+
+  const date = new Date();
+  let created_date = `${date.getFullYear()}/${(
+    "0" +
+    (date.getMonth() + 1)
+  ).slice(-2)}/${date.getDate()}`;
+
+  // console.log("type = ", id);
+  // console.log("title = ", docTitle);
+  // console.log("content =  ", terms);
+  // console.log("parties_number = ", partyList.length);
+  // console.log("date = ", date.toLocaleDateString());
+  // console.log("SavedItem = ", savedItem);
+
+  const sendDataToTheTemplateEndpoint = (arrayOfEmail) => {
+    console.log("Hi from function ");
+
+    // console.log(id);
+    try {
+      axios
+        .post(`${process.env.REACT_APP_BACKEND_URL}/customise-document/template`, {
+          type: id,
+          title: content,
+          content: terms,
+          parties_number: partyList.length,
+          created_date: created_date,
+        })
+        .then((res) => {
+          // console.log("Data sent successfully 12345", res.data);
+          templateID = res.data.document_template_id;
+          //console.log(templateID);
+          sendEmail(arrayOfEmail, templateID);
+          sendSignatureConfigToTheBackend(
+            res.data.document_template_id,
+            savedItem
+          );
+          updatePartiesToTheEndpoint(
+            res.data.document_template_id,
+            partyList.map((item) => item.parties_id)
+          );
+        });
+    } catch (error) {
+      // console.log("Error sending data *********", error);
+    }
+  };
+
+  const sendEmail = (arrayOfEmail, templateID) => {
+    //console.log(arrayOfEmail);
+    //console.log(templateID);
+
+    arrayOfEmail?.forEach((item) => {
+      var templateParams = {
+        docName: docTitle,
+        email: item,
+        message: `Please kindly check and approve or deny the document that was created by the Paperwork Team via URL: localhost:3000/recipient/${item}/${templateID}`,
+      };
+      //alert("hi");
+      emailjs
+        .send(
+          "service_7d8l9ff",
+          "template_25x692y",
+          templateParams,
+          "VBzIorHlAAspUrEhL"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            handleAlert();
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      //alert(templateParams.email);
+    });
+  };
+  // sending signature config to the backend
+  const sendSignatureConfigToTheBackend = (id, savedItem) => {
+    // console.log("Hi from the SendToSignatureConfig function");
+    // console.log("id in ***", id);
+    try {
+      axios
+        .post(
+          `${process.env.REACT_APP_BACKEND_URL}/customise-document/${id}/configuration`,
+          savedItem
+        )
+        .then((res) => {
+          // console.log("Config data send successfully from Lachie", res.data);
+        });
+    } catch (error) {
+      // console.log("Error saving Config data", error);
+    }
+  };
+
+  const updatePartiesToTheEndpoint = (id, partyList) => {
+    try {
+      const response = axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/customise-document/${id}/parties`,
+        { parties_ids: partyList }
+      );
+
+      console.log("Parties sent successfully:", response.data);
+    } catch (error) {
+      document.write("Error sending party:", error);
+    }
+  };
+
+  const [partiesList, setPartiesList] = useState([]);
+
+  const getParties = async () => {
+    try {
+      axios
+        .get(`${process.env.REACT_APP_BACKEND_URL}/customise-document/${id}/parties`)
+        .then((res) => {
+          //match template type version with the id
+          setPartiesList(res.data);
+          console.warn("got parties");
+          console.warn(res.data);
+        });
+    } catch (err) {
+      document.write("Error fetching parties ", err);
+    }
+  };
+
+  // Function to render type-specific content
+  const renderTypeSpecificContent = () => {
+    const commonProps = {
+      selected,
+      docTitle,
+      setSelected,
+    };
+
+    switch (id) {
+      case 'TPL03': // NDA Agreement
+        return <CustomizeNDAContent {...commonProps} />;
+      case 'TPL01': // Employment Contract
+        return <CustomizeEmploymentContent {...commonProps} />;
+      case 'TPL02': // Lease Agreement
+        return <CustomizeLeaseContent {...commonProps} />;
+      case 'TPL04': // Service Agreement
+        return <CustomizeServiceContent {...commonProps} />;
+      case 'TPL05': // Sales Contract
+        return <CustomizeSalesContent {...commonProps} />;
+      default:
+        // Fall back to original content for other types
+        return (
+          <>
+            <div
+              className={`doc-parties ${selected === 2 ? "selected" : ""}`}
+              onClick={() => {
+                setSelected(2);
+              }}
+            >
+              <b>Parties</b>
+              {selectedParty}
+            </div>
+            <div
+              className={`doc-terms ${selected === 3 ? "selected" : ""}`}
+              onClick={() => {
+                setSelected(3);
+              }}
+            >
+              <b>Terms</b>
+              {type !== "blank" ? (
+                <span>Note: Put the Document Terms Here That Involve</span>
+              ) : (
+                <span>Start typing to add terms...</span>
+              )}
+            </div>
+            <div
+              className={`doc-signature ${selected === 4 ? "selected" : ""}`}
+              onClick={() => {
+                setSelected(4);
+              }}
+            >
+              <b>Signature Configuration</b>
+            </div>
+          </>
+        );
+    }
+  };
+
+  return (
+    <div className="customiseDoc">
+      <div className="top-customiseDoc">
+        <div className="headerDoc">
+          <img src={Doc} alt="DocIcon" />
+          <span>Template view</span>
+        </div>
+      </div>
+
+      <div className="bottom-customiseDoc">
+        <div className="left-customiseDoc">
+          <div
+            className={`doc-title ${selected === 1 ? "selected" : ""}`}
+            onClick={() => {
+              setSelected(1);
+            }}
+          >
+            {docTitle}
+          </div>
+          <div className="content-customiseDoc">
+            {renderTypeSpecificContent()}
+          </div>
+        </div>
+        <div className="right-customiseDoc">
+          {selected === 1 && (
+            <TextEditor
+              editor={editor}
+              title={content}
+              selected={selected}
+              setTitle={setDocContent}
+              page="title"
+            />
+          )}
+          {/* {selected === 2 && (
+            <Parties partiesList={partiesList} setPartiesList={setPartyList} />
+          )} */}
+          {selected === 3 && (
+            <Terms
+              id={id}
+              data={data}
+              editor={editor}
+              terms={terms}
+              selected={selected}
+              setContent={setDocTerms}
+              inputList={inputList}
+              page="content"
+              setInputList={setInputList}
+            />
+          )}
+          {selected === 4 && (
+            <SignatureConfig savedItem={savedItem} setSaveItem={setSaveItem} />
+          )}
+
+          <div className={selected === 2 ? "" : "invisible"}>
+            <Parties partiesList={partiesList} setPartiesList={setPartyList} />
+          </div>
+          <div className="btn">
+            {/* <button className="cancel">Cancel</button> */}
+            <button
+              className="cancel"
+              onClick={() => {
+                if (selected > 1) {
+                  setSelected((prev) => prev - 1); // Decrement index, go back to previous section
+                } else {
+                  // handleAlert();
+                  handleCancel();
+                }
+              }}
+            >
+              Cancel
+            </button>
+
+            <button
+              className="save"
+              onClick={() => {
+                // console.log("$$$ Save Click " + selected);
+                if (selected !== 4) {
+                  setSelected((prev) => prev + 1);
+                  // saveToDatabase(payload);
+                  //    sendDataToTheTemplateEndpoint();
+                  // sendSignatureConfigToTheBackend(savedItem);
+                } else {
+                  handleSave();
+                }
+              }}
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {showAlert && <SuccessfulPage closeModal={handleClose} />}
+    </div>
+  );
+}

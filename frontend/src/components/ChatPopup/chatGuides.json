@@ -1,0 +1,57 @@
+[
+  {
+    "category": "📘 AI Chat Guides (Draft v1)",
+    "useCases": [
+      {
+        "useCase": "Summarize Document",
+        "prompt": "Summarize section 2 of this contract in 3 bullet points.",
+        "hint": "Ask me to summarize any section of your document into simple points."
+      },
+      {
+        "useCase": "Redact Sensitive Data",
+        "prompt": "Hide all DOB and TFN fields for non-HR users.",
+        "hint": "I can redact sensitive information from documents based on roles."
+      },
+      {
+        "useCase": "Explain a Clause",
+        "prompt": "Explain clause 5.1 in plain English.",
+        "hint": "I can explain complex legal clauses in everyday language."
+      },
+      {
+        "useCase": "Generate Checklist",
+        "prompt": "Create a signing checklist for onboarding paperwork.",
+        "hint": "I can turn documents into actionable checklists for onboarding."
+      },
+      {
+        "useCase": "Create Comprehension Quiz",
+        "prompt": "Make a 3-question quiz to test understanding of section 3.",
+        "hint": "I can generate short quizzes to verify document comprehension."
+      },
+      {
+        "useCase": "Compare Two Documents",
+        "prompt": "Compare the NDA and employment contract, highlight differences.",
+        "hint": "I can compare documents and highlight differences."
+      },
+      {
+        "useCase": "Validate Document Fields",
+        "prompt": "Check if the ABN and ACN are valid in this form.",
+        "hint": "I can validate fields like ABN/ACN, license numbers, or expiry dates."
+      },
+      {
+        "useCase": "Draft Missing Section",
+        "prompt": "Draft a confidentiality clause for this agreement.",
+        "hint": "I can suggest standard clauses to fill in missing document sections."
+      },
+      {
+        "useCase": "Task Extraction from Notes",
+        "prompt": "From this voice note, create follow-up tasks.",
+        "hint": "I can turn transcribed notes into tasks, reminders, or events."
+      },
+      {
+        "useCase": "Document Categorization",
+        "prompt": "Organize these files into HR, Legal, and Finance categories.",
+        "hint": "I can auto-categorize and tag documents for easier management."
+      }
+    ]
+  }
+]

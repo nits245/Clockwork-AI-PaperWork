@@ -1,0 +1,93 @@
+[
+  {
+    "id": "clause.header.consent",
+    "title": "Research Consent Form Header",
+    "body": "<div class='consent-header-section'><div class='consent-header-content'><h1 class='consent-header-title'>RESEARCH PARTICIPATION CONSENT FORM</h1><div class='university-info'>{{university.name}}<br>{{university.address}}<br>{{university.city_state_postcode}}</div></div><img src='/Logo.jpeg' alt='University Logo' class='university-logo'></div>",
+    "jurisdiction": "AU",
+    "tags": ["header", "consent", "research", "with-logo"]
+  },
+  {
+    "id": "clause.project.info",
+    "title": "Project Information",
+    "body": "<div class='project-info-section'><h2>Project Information</h2><table class='info-table'><tr><td><strong>Project Title:</strong></td><td>{{project.title}}</td></tr><tr><td><strong>Project Code:</strong></td><td>{{project.code}}</td></tr><tr><td><strong>Ethics Approval Number:</strong></td><td>{{ethics.approval.number}}</td></tr></table></div>",
+    "jurisdiction": "AU",
+    "tags": ["project", "information"]
+  },
+  {
+    "id": "clause.participant.details",
+    "title": "Participant Details",
+    "body": "<div class='participant-details-section'><h2>Participant Details</h2><table class='info-table'><tr><td><strong>Name:</strong></td><td>{{participant.name}}</td></tr><tr><td><strong>Email:</strong></td><td>{{participant.email}}</td></tr><tr><td><strong>Phone:</strong></td><td>{{participant.phone}}</td></tr><tr><td><strong>Organization:</strong></td><td>{{participant.organization}}</td></tr></table></div>",
+    "jurisdiction": "AU",
+    "tags": ["participant", "details"]
+  },
+  {
+    "id": "clause.research.purpose",
+    "title": "Purpose of Research",
+    "body": "<div class='research-purpose-section'><h2>Purpose of Research</h2><p>This research project aims to investigate and evaluate the effectiveness of the {{project.title}}. Your participation will contribute to the development and validation of this system.</p><p><strong>Primary Investigator:</strong> {{researcher.name}}<br><strong>Email:</strong> {{researcher.email}}<br><strong>Phone:</strong> {{researcher.phone}}</p><p><strong>Project Supervisor:</strong> {{supervisor.name}}<br><strong>Email:</strong> {{supervisor.email}}</p></div>",
+    "jurisdiction": "AU",
+    "tags": ["purpose", "research", "investigator"]
+  },
+  {
+    "id": "clause.participation.requirements",
+    "title": "What Participation Involves",
+    "body": "<div class='participation-section'><h2>What Your Participation Involves</h2><ul><li><strong>Duration:</strong> {{study.duration}}</li><li><strong>Location:</strong> {{study.location}}</li><li><strong>Activities:</strong> Your participation will involve using the system, providing feedback, and participating in interviews or surveys as required.</li><li><strong>Time Commitment:</strong> The total time commitment is expected to be approximately as specified in the study duration.</li></ul></div>",
+    "jurisdiction": "AU",
+    "tags": ["participation", "requirements", "activities"]
+  },
+  {
+    "id": "clause.risks.benefits",
+    "title": "Risks and Benefits",
+    "body": "<div class='risks-benefits-section'><h2>Risks and Benefits</h2><h3>Potential Risks:</h3><ul><li>Minimal risk is anticipated for this study</li><li>Time commitment required for participation</li><li>Possible minor inconvenience during data collection</li></ul><h3>Potential Benefits:</h3><ul><li>Contribution to academic research and system development</li><li>Opportunity to experience and evaluate new technology</li><li>Access to research findings upon completion</li></ul></div>",
+    "jurisdiction": "AU",
+    "tags": ["risks", "benefits", "disclosure"]
+  },
+  {
+    "id": "clause.confidentiality.statement",
+    "title": "Confidentiality and Privacy",
+    "body": "<div class='confidentiality-section'><h2>Confidentiality and Privacy</h2><p>All information collected during this research will be treated as confidential and will be handled in accordance with the Australian Privacy Principles and relevant university policies.</p><ul><li>Your personal information will be de-identified in all reports and publications</li><li>Only the research team will have access to identifiable data</li><li>Data will be stored securely in password-protected systems</li><li>Research data will be retained for {{data.retention.period}} as per university policy</li></ul></div>",
+    "jurisdiction": "AU",
+    "tags": ["confidentiality", "privacy", "data-protection"]
+  },
+  {
+    "id": "clause.data.usage",
+    "title": "Use of Data",
+    "body": "<div class='data-usage-section'><h2>Use of Research Data</h2><p>Data collected during this research may be used for:</p><ul><li>Academic publications and conference presentations</li><li>Project reports and thesis completion</li><li>System improvement and development</li><li>Teaching and educational purposes (in de-identified form)</li></ul><p>All uses will maintain participant confidentiality and comply with ethical research standards.</p></div>",
+    "jurisdiction": "AU",
+    "tags": ["data", "usage", "publications"]
+  },
+  {
+    "id": "clause.withdrawal.rights",
+    "title": "Withdrawal Rights",
+    "body": "<div class='withdrawal-section'><h2>Your Rights as a Participant</h2><p>Participation in this research is entirely voluntary. You have the right to:</p><ul><li>Withdraw from the study at any time without penalty or prejudice</li><li>Request that your data be removed from the study (up until data analysis begins)</li><li>Decline to answer any questions without explanation</li><li>Ask questions about the research at any time</li><li>Request a copy of the research findings</li></ul><p>If you wish to withdraw or have concerns, please contact {{researcher.name}} at {{researcher.email}}</p></div>",
+    "jurisdiction": "AU",
+    "tags": ["withdrawal", "rights", "voluntary"]
+  },
+  {
+    "id": "clause.consent.checkboxes",
+    "title": "Consent Declaration",
+    "body": "<div class='consent-checkboxes-section'><h2>Consent Declaration</h2><p>By signing this form, I confirm that:</p><div class='checkbox-list'>[CHECKBOX] I have read and understood the information provided about this research project<br><br>[CHECKBOX] I have had the opportunity to ask questions and have had them answered to my satisfaction<br><br>[CHECKBOX] I understand that my participation is voluntary and I can withdraw at any time<br><br>[CHECKBOX] I understand how the data collected will be used and stored<br><br>[CHECKBOX] I consent to participate in this research project<br><br>[CHECKBOX] I consent to my data being used for academic publications (in de-identified form)<br><br>[CHECKBOX] I would like to receive a summary of the research findings (optional)</div></div>",
+    "jurisdiction": "AU",
+    "tags": ["consent", "checkboxes", "declaration"]
+  },
+  {
+    "id": "clause.signature.participant",
+    "title": "Participant Signature",
+    "body": "<div class='signature-section'><h2>Participant Signature</h2><table class='signature-table'><tr><td><strong>Participant Name (Print):</strong></td><td><div class='signature-line'>_________________________________</div></td></tr><tr><td><strong>Participant Signature:</strong></td><td><div class='signature-line'>_________________________________</div></td></tr><tr><td><strong>Date:</strong></td><td><div class='signature-line'>_________________________________</div></td></tr></table></div>",
+    "jurisdiction": "AU",
+    "tags": ["signature", "participant", "signing"]
+  },
+  {
+    "id": "clause.signature.researcher",
+    "title": "Researcher Declaration",
+    "body": "<div class='signature-section'><h2>Researcher Declaration</h2><p>I have provided information about this research project to the participant and believe they understand the nature and purpose of the research.</p><table class='signature-table'><tr><td><strong>Researcher Name (Print):</strong></td><td><div class='signature-line'>_________________________________</div></td></tr><tr><td><strong>Researcher Signature:</strong></td><td><div class='signature-line'>_________________________________</div></td></tr><tr><td><strong>Date:</strong></td><td><div class='signature-line'>_________________________________</div></td></tr></table></div>",
+    "jurisdiction": "AU",
+    "tags": ["signature", "researcher", "declaration"]
+  },
+  {
+    "id": "clause.footer.university",
+    "title": "University Footer",
+    "body": "<div class='university-footer'><hr><p style='text-align: center; font-size: 0.9em; color: #666;'><strong>{{university.name}}</strong> | CRICOS Provider 00111D | swinburne.edu.au<br>This research has been approved by the Swinburne University Human Research Ethics Committee (SUHREC)<br>For complaints or concerns, contact: resethics@swin.edu.au</p></div>",
+    "jurisdiction": "AU",
+    "tags": ["footer", "university", "ethics"]
+  }
+]

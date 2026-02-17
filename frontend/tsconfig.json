@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                          // The version of JavaScript to target.
+    "lib": ["dom", "dom.iterable", "esnext"], // Use the DOM and ES Next libraries.
+    "allowJs": true,                          // Allow JavaScript files to be compiled (useful during migration).
+    "skipLibCheck": true,                     // Skip type checking of declaration files.
+    "esModuleInterop": true,                  // Ensures compatibility between CommonJS and ES Modules.
+    "allowSyntheticDefaultImports": true,     // Allow default imports from modules that don't have default exports.
+    "strict": true,                           // Enable all strict type-checking options.
+    "forceConsistentCasingInFileNames": true, // Ensure that file names are case-sensitive.
+    "noFallthroughCasesInSwitch": true,       // Ensures that switch statements have default cases.
+    "module": "ESNext",                       // Use ESNext for module resolution.
+    "moduleResolution": "node",               // Resolve modules using Node.js-style resolution.
+    "resolveJsonModule": true,                // Allow importing `.json` files.
+    "isolatedModules": true,                  // Ensure each file is treated as a separate module.
+    "jsx": "react-jsx"                        // Enable the new JSX transform.
+  },
+  "include": ["src"],                         // Include your source folder.
+  "exclude": ["node_modules", "build"]        // Exclude build artifacts.
+}

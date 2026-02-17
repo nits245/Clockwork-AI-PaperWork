@@ -1,0 +1,32 @@
+/* Manage the overflow and height for the general page */
+.app {
+  display: flex;
+
+  .left {
+    flex: 1;
+    width: 280px;
+    border-right: #E8EAEA solid 1px;
+    /* box-shadow: 0.5px 5px 5px rgba(128, 128, 128, 0.382);
+    border-radius: 0px 0px 5px 0px; */
+  }
+
+  .right {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  #root {
+      height: 100vh;
+  }
+
+  .app {
+      height: 100vh;
+  }
+
+  .App {
+      height: 100vh;
+  }
+}

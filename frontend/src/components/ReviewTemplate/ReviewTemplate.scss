@@ -1,0 +1,75 @@
+.header-createDoc {
+  width: 200px;
+}
+.preview-container {
+  width: 595px;
+  height: 100%;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+  overflow-y: scroll;
+
+  .preview-title {
+    margin-top: 5px;
+    align-self: center;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .body-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+
+    .preview-party {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .preview-content {
+      font-weight: 500;
+    }
+    .preview-signature {
+      font-weight: 500;
+    }
+    .party-content {
+      font-size: 10px;
+      font-weight: 500;
+    }
+
+    button {
+      align-self: center;
+      cursor: pointer;
+      padding: 10px;
+      width: 200px;
+      border: none;
+      border-radius: 5px;
+      background-color: #5bccde;
+      color: white;
+      font-weight: 500;
+      font-weight: bold;
+    }
+  }
+}
+
+.content {
+  font-size: 10px;
+}
+
+.cus-btn {
+  align-self: center;
+
+  .btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #5bccde;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+  }
+}
+

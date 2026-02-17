@@ -1,0 +1,176 @@
+.savedDocumentsControl {
+  width: 100%;
+  padding: 2rem;
+
+  .loading-state,
+  .error-state,
+  .empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    
+    h3 {
+      color: #333;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .btn-create {
+      padding: 0.75rem 2rem;
+      background: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #1565c0;
+      }
+    }
+  }
+
+  .error-state {
+    color: #f44336;
+  }
+
+  .docControlHeader {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 1rem;
+
+    h3 {
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .templateAction {
+      text-align: center;
+    }
+  }
+
+  .docControlList {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+
+    .table {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0 2rem;
+
+      .table-row {
+        background-color: #ffffff;
+        padding: 1.5rem 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: 40% 30% 30%;
+        align-items: center;
+        transition: all 0.3s ease;
+
+        &:hover {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          transform: translateY(-2px);
+        }
+
+        .template-name {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #333;
+        }
+
+        .template-category {
+          color: #666;
+          font-size: 1rem;
+        }
+
+        .template-action {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+
+          img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
+            &.reviewicon:hover {
+              filter: brightness(0.8);
+            }
+
+            &.delete-icon:hover {
+              filter: brightness(0) saturate(100%) invert(27%) sepia(100%) saturate(3289%) hue-rotate(348deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    .docControlHeader {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+
+      h3 {
+        display: none;
+
+        &:first-child {
+          display: block;
+        }
+      }
+    }
+
+    .docControlList {
+      .table {
+        .table-row {
+          grid-template-columns: 1fr;
+          gap: 0.5rem;
+          padding: 1rem;
+
+          .template-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+          }
+
+          .template-category,
+          .template-date {
+            text-align: left;
+            font-size: 0.85rem;
+          }
+
+          .template-action {
+            justify-content: flex-start;
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

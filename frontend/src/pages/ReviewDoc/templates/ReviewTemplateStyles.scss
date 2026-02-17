@@ -1,0 +1,165 @@
+// Type-specific review template styles
+.review-nda-content,
+.review-employment-content,
+.review-lease-content,
+.review-service-content,
+.review-sales-content {
+  .nda-section,
+  .employment-section,
+  .lease-section,
+  .service-section,
+  .sales-section {
+    margin-bottom: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    border-left: 4px solid #007bff;
+    
+    h3 {
+      margin: 0 0 12px 0;
+      color: #2c3e50;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    p {
+      margin: 0 0 12px 0;
+      color: #495057;
+      line-height: 1.6;
+    }
+  }
+  
+  .parties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+    
+    .party-card {
+      background: white;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      
+      .party-role {
+        background: #007bff;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        display: inline-block;
+      }
+      
+      div {
+        margin-bottom: 4px;
+        
+        strong {
+          color: #495057;
+        }
+      }
+    }
+  }
+  
+  .terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+    
+    .term-box {
+      background: white;
+      border: 1px solid #e9ecef;
+      border-radius: 6px;
+      padding: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      
+      strong {
+        color: #6c757d;
+        font-size: 14px;
+        display: block;
+        margin-bottom: 4px;
+      }
+    }
+  }
+  
+  .content-box {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 16px;
+    margin-top: 12px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    line-height: 1.6;
+  }
+  
+  .version-info {
+    margin-top: 20px;
+    padding: 12px;
+    background: #e9ecef;
+    border-radius: 6px;
+    text-align: center;
+    
+    strong {
+      color: #495057;
+    }
+  }
+}
+
+// NDA-specific styling
+.review-nda-content {
+  .nda-section {
+    border-left-color: #dc3545;
+    
+    .party-role {
+      background: #dc3545;
+    }
+  }
+}
+
+// Employment-specific styling
+.review-employment-content {
+  .employment-section {
+    border-left-color: #28a745;
+    
+    .party-role {
+      background: #28a745;
+    }
+  }
+}
+
+// Lease-specific styling
+.review-lease-content {
+  .lease-section {
+    border-left-color: #ffc107;
+    
+    .party-role {
+      background: #ffc107;
+      color: #212529;
+    }
+  }
+}
+
+// Service-specific styling
+.review-service-content {
+  .service-section {
+    border-left-color: #17a2b8;
+    
+    .party-role {
+      background: #17a2b8;
+    }
+  }
+}
+
+// Sales-specific styling
+.review-sales-content {
+  .sales-section {
+    border-left-color: #6f42c1;
+    
+    .party-role {
+      background: #6f42c1;
+    }
+  }
+}

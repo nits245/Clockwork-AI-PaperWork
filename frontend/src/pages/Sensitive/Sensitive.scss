@@ -1,0 +1,232 @@
+.sensitive-container {
+  max-width: auto;
+  margin:10px;
+  padding: 25px;
+  background-color: #84d4ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-section {
+  width: 50%;
+}
+
+.section {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(236, 236, 236);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+    border-color: #000000;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+  }
+
+  button[type='submit'] {
+    background-color: #929292;
+    color: white;
+  }
+
+  button[type='submit']:hover {
+    background-color: #616161;
+  }
+
+  button:nth-child(1) {
+    background-color: #c42626;
+    color: rgb(255, 255, 255);
+  }
+
+  button:nth-child(1):hover {
+    background-color: #791313;
+  }
+
+  button:nth-child(2) {
+    background-color: #6c757d;
+    color: white;
+  }
+
+  button:nth-child(2):hover {
+    background-color: #5a6268;
+  }
+
+  /* Disabled button styles */
+  button:disabled {
+    background-color: #d3d3d3; /* Grey color to indicate disabled state */
+    color: #a9a9a9; /* Lighter text color */
+    cursor: not-allowed; /* Change cursor to indicate it's disabled */
+    box-shadow: none; /* Remove shadow */
+  }
+
+  button:disabled:hover {
+    background-color: #d3d3d3; /* Ensure no hover effect when disabled */
+  }
+}
+
+
+.upload-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.upload-image-input {
+  display: none; /* Hide the default file input */
+}
+
+.upload-image-btn {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  margin: 15px 10px 15px 0; /* Adjust spacing between buttons */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.upload-image-btn:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.upload-image-btn:focus {
+  outline: none;
+}
+
+.image-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block; /* Ensures the grey box and image stay together */
+}
+
+.image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 35px;  /* Adjust this value for how far you want it shifted vertically */
+  left: 35px; /* Adjust this value for how far you want it shifted horizontally */
+  right: 40%; /* Extend the grey box slightly to the right */
+  bottom: -9%; /* Extend the grey box slightly to the bottom */
+  background-color: #c7c7c7;
+  border-radius: 20px; 
+  z-index: 1; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper img {
+  position: relative;
+  display: block;
+  z-index: 2;
+  border-radius: 20px; 
+  max-width: 55%;
+  object-fit: contain;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  border-top: 8px solid white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.queryFailure {
+  background-color: #c42626; /* Red for failure */
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  text-align: center;
+  margin: 10px;
+
+
+}
+
+.querySuccess {
+  background-color: #28a745; /* Green for success */
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  text-align: center;
+  margin: 10px;
+}
+
